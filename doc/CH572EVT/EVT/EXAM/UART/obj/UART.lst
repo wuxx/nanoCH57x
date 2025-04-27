@@ -1,0 +1,1877 @@
+
+UART.elf:     file format elf32-littleriscv
+UART.elf
+architecture: riscv:rv32, flags 0x00000112:
+EXEC_P, HAS_SYMS, D_PAGED
+start address 0x00000000
+
+Program Header:
+0x70000003 off    0x0000b9da vaddr 0x00000000 paddr 0x00000000 align 2**0
+         filesz 0x00000051 memsz 0x00000000 flags r--
+    LOAD off    0x00001000 vaddr 0x00000000 paddr 0x00000000 align 2**12
+         filesz 0x00000004 memsz 0x00000004 flags r-x
+    LOAD off    0x00002000 vaddr 0x20000000 paddr 0x00000004 align 2**12
+         filesz 0x00000784 memsz 0x00000784 flags r-x
+    LOAD off    0x00002788 vaddr 0x00000788 paddr 0x00000788 align 2**12
+         filesz 0x00000406 memsz 0x00000408 flags rwx
+    LOAD off    0x00003784 vaddr 0x20000784 paddr 0x00000b90 align 2**12
+         filesz 0x00000014 memsz 0x00000080 flags rw-
+
+Sections:
+Idx Name                 Size      VMA       LMA       File off  Algn  Flags
+  0 .init                00000004  00000000  00000000  00001000  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .highcode_initlalign 00000000  00000004  00000004  00003798  2**0  CONTENTS
+  2 .highcodelalign      00000000  00000004  00000004  00003798  2**0  CONTENTS
+  3 .highcode            00000784  20000000  00000004  00002000  2**1  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  4 .text                00000404  00000788  00000788  00002788  2**2  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  5 .vector_handler      00000002  00000b8c  00000b8c  00002b8c  2**0  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  6 .fini                00000002  00000b8e  00000b8e  00002b8e  2**0  ALLOC, CODE
+  7 .dlalign             00000000  00000b90  00000b90  00003798  2**0  CONTENTS
+  8 .data                00000014  20000784  00000b90  00003784  2**2  CONTENTS, ALLOC, LOAD, DATA
+  9 .bss                 0000006c  20000798  00000ba4  00003798  2**2  ALLOC
+ 10 .stack               00000000  20003000  20003000  00003798  2**0  CONTENTS
+ 11 .debug_info          00002231  00000000  00000000  00003798  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 12 .debug_abbrev        00000aa8  00000000  00000000  000059c9  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 13 .debug_loclists      00000dab  00000000  00000000  00006471  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 14 .debug_aranges       000001f8  00000000  00000000  00007220  2**3  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 15 .debug_rnglists      00000299  00000000  00000000  00007418  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 16 .debug_line          000031ca  00000000  00000000  000076b1  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 17 .debug_str           00000c9d  00000000  00000000  0000a87b  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 18 .debug_line_str      0000045e  00000000  00000000  0000b518  2**0  CONTENTS, READONLY, DEBUGGING, OCTETS
+ 19 .comment             00000064  00000000  00000000  0000b976  2**0  CONTENTS, READONLY
+ 20 .riscv.attributes    00000051  00000000  00000000  0000b9da  2**0  CONTENTS, READONLY
+ 21 .debug_frame         000003ec  00000000  00000000  0000ba2c  2**2  CONTENTS, READONLY, DEBUGGING, OCTETS
+SYMBOL TABLE:
+00000000 l    d  .init	00000000 .init
+00000004 l    d  .highcode_initlalign	00000000 .highcode_initlalign
+00000004 l    d  .highcodelalign	00000000 .highcodelalign
+20000000 l    d  .highcode	00000000 .highcode
+00000788 l    d  .text	00000000 .text
+00000b8c l    d  .vector_handler	00000000 .vector_handler
+00000b8e l    d  .fini	00000000 .fini
+00000b90 l    d  .dlalign	00000000 .dlalign
+20000784 l    d  .data	00000000 .data
+20000798 l    d  .bss	00000000 .bss
+20003000 l    d  .stack	00000000 .stack
+00000000 l    d  .debug_info	00000000 .debug_info
+00000000 l    d  .debug_abbrev	00000000 .debug_abbrev
+00000000 l    d  .debug_loclists	00000000 .debug_loclists
+00000000 l    d  .debug_aranges	00000000 .debug_aranges
+00000000 l    d  .debug_rnglists	00000000 .debug_rnglists
+00000000 l    d  .debug_line	00000000 .debug_line
+00000000 l    d  .debug_str	00000000 .debug_str
+00000000 l    d  .debug_line_str	00000000 .debug_line_str
+00000000 l    d  .comment	00000000 .comment
+00000000 l    d  .riscv.attributes	00000000 .riscv.attributes
+00000000 l    d  .debug_frame	00000000 .debug_frame
+00000000 l    df *ABS*	00000000 startup_CH572.o
+00000b8c l       .vector_handler	00000000 ENDOCE_IRQHandler
+00000000 l    df *ABS*	00000000 Main.c
+00000000 l    df *ABS*	00000000 CH57x_sys.c
+00000000 l    df *ABS*	00000000 ISP572.c
+200004b8 l       .highcode	00000000 .loop52
+200004c6 l       .highcode	00000000 .loop63
+200004d4 l       .highcode	00000000 .loop74
+200005d4 l       .highcode	00000000 .loop247
+00000000 l    df *ABS*	00000000 CH57x_clk.c
+00000000 l    df *ABS*	00000000 CH57x_gpio.c
+00000000 l    df *ABS*	00000000 CH57x_uart.c
+200004d4 g     F .highcode	0000000e FLASH_ROM_OUT
+00000b8c  w      .vector_handler	00000000 CMP_IRQHandler
+20000f98 g       .data	00000000 __global_pointer$
+200003ec  w    F .highcode	00000084 HardFault_Handler
+00000b8c  w      .vector_handler	00000000 GPIOA_IRQHandler
+00000b8c  w      .vector_handler	00000000 SysTick_Handler
+00000b8c  w      .vector_handler	00000000 NMI_Handler
+20000116 g     F .highcode	00000096 UART_IRQHandler
+20000598 g     F .highcode	00000060 FLASH_CMD_ROM_WRITE
+20000798 g       .bss	00000000 _sbss
+000009f8 g     F .text	00000020 UART_RecvString
+200004c6 g     F .highcode	0000000e FLASH_ROM_IN
+000009a2 g     F .text	00000032 UART_DefInit
+00000842 g     F .text	00000050 HSECFG_Capacitance
+00000b8c  w      .vector_handler	00000000 SWI_Handler
+00000004 g       .init	00000000 _einit
+00000b8c  w      .vector_handler	00000000 BB_IRQHandler
+00000a40 g     F .text	00000136 FLASH_EEPROM_CMD
+00000b8c  w      .vector_handler	00000000 Break_Point_Handler
+20000562 g     F .highcode	00000036 FLASH_START
+200004a4 g     F .highcode	00000014 FLASH_ROM_BEG
+200005f8 g     F .highcode	00000072 FLASH_CMD_ROM_ERASE
+00000b8c  w      .vector_handler	00000000 Ecall_M_Mode_Handler
+200004e2 g     F .highcode	00000048 FLASH_ROM_ADDR
+00000b8c  w      .vector_handler	00000000 RTC_IRQHandler
+20000804 g       .bss	00000000 _ebss
+00000b8c  w      .vector_handler	00000000 SPI_IRQHandler
+2000052a g     F .highcode	00000038 FLASH_ROM_WAIT
+00000a18 g     F .text	00000028 UART_Remap
+20000000 g       .highcode	00000000 _vector_base
+00000b8c  w      .vector_handler	00000000 PWMX_IRQHandler
+000009d4 g     F .text	00000024 UART_SendString
+00000000 g       .init	00000000 _start
+20000000 g       .highcode	00000000 _highcode_vma_start
+00000b8c  w      .vector_handler	00000000 KEYSCAN_IRQHandler
+20000784 g       .data	00000000 _data_vma
+200001ac g     F .highcode	00000240 SetSysClock
+00000b8c  w      .vector_handler	00000000 USB_IRQHandler
+2000072c g     F .highcode	0000003e FLASH_CMD_GET_UNIQUE_ID
+200006ba g     F .highcode	00000012 FLASH_CMD_ROM_PWR
+00000b8c  w      .vector_handler	00000000 I2C_IRQHandler
+20000090 g     F .highcode	00000086 main
+20000798 g     O .bss	00000001 trigB
+00000004 g       .highcodelalign	00000000 _highcode_lma
+00000b8c  w      .vector_handler	00000000 LLE_IRQHandler
+00000000 g       .init	00000000 _sinit
+2000076a g     F .highcode	0000001a FLASH_CMD_ROM_SW_RESET
+00000b8c  w      .vector_handler	00000000 TMR_IRQHandler
+2000079c g     O .bss	00000004 Freq_LSI
+00000b8c  w      .vector_handler	00000000 WDOG_BAT_IRQHandler
+00000b8c  w      .vector_handler	00000000 Ecall_U_Mode_Handler
+200007a0 g     O .bss	00000064 RxBuff
+20003000 g       .stack	00000000 _eusrstack
+00000892 g     F .text	00000082 GPIOA_ModeCfg
+00000914 g     F .text	0000005e GetSysClock
+20000470 g     F .highcode	00000034 FLASH_ROM_BEG_FF
+200006cc g     F .highcode	00000060 FLASH_CMD_GET_ROM_INFO
+20000798 g       .data	00000000 _edata
+20000804 g       .bss	00000000 _end
+20000784 g       .highcode	00000000 _highcode_vma_end
+00000b90 g       .dlalign	00000000 _data_lma
+20000784 g     O .data	00000014 TxBuff
+00000788  w      .text	00000000 handle_reset
+00000972 g     F .text	00000030 UART_BaudRateCfg
+200004b8 g     F .highcode	0000000e FLASH_ROM_END
+2000066a g     F .highcode	00000050 FLASH_CMD_ROM_VERIFY
+
+
+
+Disassembly of section .init:
+
+00000000 <_sinit>:
+_start():
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/Startup/startup_CH572.S:18
+	.section	.init,"ax",@progbits
+	.global	_start
+ 	.global	_vector_base
+	.align	1
+_start:
+	j	handle_reset
+   0:	7880006f          	j	788 <handle_reset>
+
+Disassembly of section .highcode:
+
+20000000 <_highcode_vma_start>:
+	...
+_vector_base():
+20000008:	00000b8c          	.word	0x00000b8c
+2000000c:	200003ec          	.word	0x200003ec
+20000010:	f3f9bda9          	.word	0xf3f9bda9
+20000014:	00000b8c          	.word	0x00000b8c
+	...
+20000020:	00000b8c          	.word	0x00000b8c
+20000024:	00000b8c          	.word	0x00000b8c
+	...
+20000030:	00000b8c          	.word	0x00000b8c
+20000034:	00000000          	.word	0x00000000
+20000038:	00000b8c          	.word	0x00000b8c
+	...
+20000044:	00000b8c          	.word	0x00000b8c
+20000048:	00000000          	.word	0x00000000
+2000004c:	00000b8c          	.word	0x00000b8c
+20000050:	00000b8c          	.word	0x00000b8c
+20000054:	00000b8c          	.word	0x00000b8c
+20000058:	00000b8c          	.word	0x00000b8c
+2000005c:	00000000          	.word	0x00000000
+20000060:	00000b8c          	.word	0x00000b8c
+	...
+2000006c:	20000116          	.word	0x20000116
+20000070:	00000b8c          	.word	0x00000b8c
+20000074:	00000b8c          	.word	0x00000b8c
+20000078:	00000b8c          	.word	0x00000b8c
+2000007c:	00000b8c          	.word	0x00000b8c
+20000080:	00000000          	.word	0x00000000
+20000084:	00000b8c          	.word	0x00000b8c
+20000088:	00000000          	.word	0x00000000
+2000008c:	00000b8c          	.word	0x00000b8c
+
+20000090 <main>:
+main():
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\UART\obj/../src/Main.c:28
+ *
+ * @return  none
+ */
+__HIGH_CODE
+int main()
+{
+20000090:	1141                	addi	sp,sp,-16
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\UART\obj/../src/Main.c:31
+    uint8_t len;
+
+    HSECFG_Capacitance(HSECap_18p);
+20000092:	4519                	li	a0,6
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\UART\obj/../src/Main.c:28
+{
+20000094:	c606                	sw	ra,12(sp)
+20000096:	c422                	sw	s0,8(sp)
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\UART\obj/../src/Main.c:31
+    HSECFG_Capacitance(HSECap_18p);
+20000098:	e0000097          	auipc	ra,0xe0000
+2000009c:	7aa080e7          	jalr	1962(ra) # 842 <HSECFG_Capacitance>
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\UART\obj/../src/Main.c:32
+    SetSysClock(CLK_SOURCE_HSE_PLL_100MHz);
+200000a0:	04600513          	li	a0,70
+200000a4:	2221                	jal	200001ac <SetSysClock>
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\UART\obj/../src/Main.c:35
+
+    /* 配置串口1：先配置IO口模式，再配置串口 */
+    GPIOA_SetBits(bTXD_0);
+200000a6:	400017b7          	lui	a5,0x40001
+200000aa:	4721                	li	a4,8
+200000ac:	0ae7ac23          	sw	a4,184(a5) # 400010b8 <_eusrstack+0x1fffe0b8>
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\UART\obj/../src/Main.c:36
+    GPIOA_ModeCfg(bRXD_0, GPIO_ModeIN_PU);      // RXD-配置上拉输入
+200000b0:	4585                	li	a1,1
+200000b2:	4511                	li	a0,4
+200000b4:	e0000097          	auipc	ra,0xe0000
+200000b8:	7de080e7          	jalr	2014(ra) # 892 <GPIOA_ModeCfg>
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\UART\obj/../src/Main.c:37
+    GPIOA_ModeCfg(bTXD_0, GPIO_ModeOut_PP_5mA); // TXD-配置推挽输出，注意先让IO口输出高电平
+200000bc:	458d                	li	a1,3
+200000be:	4521                	li	a0,8
+200000c0:	e0000097          	auipc	ra,0xe0000
+200000c4:	7d2080e7          	jalr	2002(ra) # 892 <GPIOA_ModeCfg>
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\UART\obj/../src/Main.c:38
+    UART_Remap(ENABLE, UART_TX_REMAP_PA3, UART_RX_REMAP_PA2);
+200000c8:	4601                	li	a2,0
+200000ca:	4581                	li	a1,0
+200000cc:	4505                	li	a0,1
+200000ce:	e0001097          	auipc	ra,0xe0001
+200000d2:	94a080e7          	jalr	-1718(ra) # a18 <UART_Remap>
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\UART\obj/../src/Main.c:39
+    UART_DefInit();
+200000d6:	e0001097          	auipc	ra,0xe0001
+200000da:	8cc080e7          	jalr	-1844(ra) # 9a2 <UART_DefInit>
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\UART\obj/../src/Main.c:42
+
+#if 1 // 测试串口发送字符串
+    UART_SendString(TxBuff, sizeof(TxBuff));
+200000de:	45d1                	li	a1,20
+200000e0:	00000517          	auipc	a0,0x0
+200000e4:	6a450513          	addi	a0,a0,1700 # 20000784 <_highcode_vma_end>
+200000e8:	e0001097          	auipc	ra,0xe0001
+200000ec:	8ec080e7          	jalr	-1812(ra) # 9d4 <UART_SendString>
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\UART\obj/../src/Main.c:48
+#endif
+
+#if 1 // 查询方式：接收数据后发送出去
+    while(1)
+    {
+        len = UART_RecvString(RxBuff);
+200000f0:	00000417          	auipc	s0,0x0
+200000f4:	6b040413          	addi	s0,s0,1712 # 200007a0 <RxBuff>
+200000f8:	8522                	mv	a0,s0
+200000fa:	e0001097          	auipc	ra,0xe0001
+200000fe:	8fe080e7          	jalr	-1794(ra) # 9f8 <UART_RecvString>
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\UART\obj/../src/Main.c:49
+        if(len)
+20000102:	0ff57793          	zext.b	a5,a0
+20000106:	dbed                	beqz	a5,200000f8 <main+0x68>
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\UART\obj/../src/Main.c:51
+        {
+            UART_SendString(RxBuff, len);
+20000108:	85be                	mv	a1,a5
+2000010a:	8522                	mv	a0,s0
+2000010c:	e0001097          	auipc	ra,0xe0001
+20000110:	8c8080e7          	jalr	-1848(ra) # 9d4 <UART_SendString>
+20000114:	b7d5                	j	200000f8 <main+0x68>
+
+20000116 <UART_IRQHandler>:
+UART_IRQHandler():
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\UART\obj/../src/Main.c:80
+__HIGH_CODE
+void UART_IRQHandler(void)
+{
+    volatile uint8_t i;
+
+    switch(UART_GetITFlag())
+20000116:	40003737          	lui	a4,0x40003
+2000011a:	40474783          	lbu	a5,1028(a4) # 40003404 <_eusrstack+0x20000404>
+2000011e:	4699                	li	a3,6
+20000120:	8bbd                	andi	a5,a5,15
+20000122:	02d78c63          	beq	a5,a3,2000015a <UART_IRQHandler+0x44>
+20000126:	4731                	li	a4,12
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\UART\obj/../src/Main.c:77
+{
+20000128:	1141                	addi	sp,sp,-16
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\UART\obj/../src/Main.c:80
+    switch(UART_GetITFlag())
+2000012a:	04e78c63          	beq	a5,a4,20000182 <UART_IRQHandler+0x6c>
+2000012e:	4711                	li	a4,4
+20000130:	02e79263          	bne	a5,a4,20000154 <UART_IRQHandler+0x3e>
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\UART\obj/../src/Main.c:89
+            UART_GetLinSTA();
+            break;
+        }
+
+        case UART_II_RECV_RDY: // 数据达到设置触发点
+            for(i = 0; i != trigB; i++)
+20000134:	000107a3          	sb	zero,15(sp)
+20000138:	00000597          	auipc	a1,0x0
+2000013c:	66058593          	addi	a1,a1,1632 # 20000798 <trigB>
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\UART\obj/../src/Main.c:91
+            {
+                RxBuff[i] = UART_RecvByte();
+20000140:	40003737          	lui	a4,0x40003
+20000144:	00000697          	auipc	a3,0x0
+20000148:	65c68693          	addi	a3,a3,1628 # 200007a0 <RxBuff>
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\UART\obj/../src/Main.c:89 (discriminator 1)
+            for(i = 0; i != trigB; i++)
+2000014c:	879c                	lbu	a5,15(sp)
+2000014e:	2190                	lbu	a2,0(a1)
+20000150:	00f61963          	bne	a2,a5,20000162 <UART_IRQHandler+0x4c>
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\UART\obj/../src/Main.c:107
+            break;
+
+        default:
+            break;
+    }
+}
+20000154:	0141                	addi	sp,sp,16
+20000156:	30200073          	mret
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\UART\obj/../src/Main.c:84
+            UART_GetLinSTA();
+2000015a:	40574783          	lbu	a5,1029(a4) # 40003405 <_eusrstack+0x20000405>
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\UART\obj/../src/Main.c:85
+            break;
+2000015e:	30200073          	mret
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\UART\obj/../src/Main.c:91 (discriminator 3)
+                RxBuff[i] = UART_RecvByte();
+20000162:	879c                	lbu	a5,15(sp)
+20000164:	40874603          	lbu	a2,1032(a4)
+20000168:	97b6                	add	a5,a5,a3
+2000016a:	a390                	sb	a2,0(a5)
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\UART\obj/../src/Main.c:92 (discriminator 3)
+                UART_SendByte(RxBuff[i]);
+2000016c:	879c                	lbu	a5,15(sp)
+2000016e:	97b6                	add	a5,a5,a3
+20000170:	239c                	lbu	a5,0(a5)
+20000172:	40f70423          	sb	a5,1032(a4)
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\UART\obj/../src/Main.c:89 (discriminator 3)
+            for(i = 0; i != trigB; i++)
+20000176:	879c                	lbu	a5,15(sp)
+20000178:	0785                	addi	a5,a5,1
+2000017a:	0ff7f793          	zext.b	a5,a5
+2000017e:	87dc                	sb	a5,15(sp)
+20000180:	b7f1                	j	2000014c <UART_IRQHandler+0x36>
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\UART\obj/../src/Main.c:97
+            i = UART_RecvString(RxBuff);
+20000182:	00000517          	auipc	a0,0x0
+20000186:	61e50513          	addi	a0,a0,1566 # 200007a0 <RxBuff>
+2000018a:	e0001097          	auipc	ra,0xe0001
+2000018e:	86e080e7          	jalr	-1938(ra) # 9f8 <UART_RecvString>
+20000192:	0ff57513          	zext.b	a0,a0
+20000196:	87c8                	sb	a0,15(sp)
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\UART\obj/../src/Main.c:98
+            UART_SendString(RxBuff, i);
+20000198:	878c                	lbu	a1,15(sp)
+2000019a:	00000517          	auipc	a0,0x0
+2000019e:	60650513          	addi	a0,a0,1542 # 200007a0 <RxBuff>
+200001a2:	e0001097          	auipc	ra,0xe0001
+200001a6:	832080e7          	jalr	-1998(ra) # 9d4 <UART_SendString>
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\UART\obj/../src/Main.c:107
+}
+200001aa:	b76d                	j	20000154 <UART_IRQHandler+0x3e>
+
+200001ac <SetSysClock>:
+SetSysClock():
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:31
+{
+    uint16_t clk_sys_cfg;
+    uint8_t i;
+    uint8_t x32M_c;
+
+    if(sc == RB_CLK_SYS_MOD)  // LSI
+200001ac:	0c000793          	li	a5,192
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:26
+{
+200001b0:	1101                	addi	sp,sp,-32
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:31
+    if(sc == RB_CLK_SYS_MOD)  // LSI
+200001b2:	04f51463          	bne	a0,a5,200001fa <SetSysClock+0x4e>
+__risc_v_disable_irq():
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\SRC\RVMSIS/core_riscv.h:154
+ */
+__attribute__((always_inline)) RV_STATIC_INLINE uint32_t __risc_v_disable_irq(void)
+{
+    uint32_t result;
+
+    __asm volatile("csrrc %0, 0x800, %1" : \
+200001b6:	08800793          	li	a5,136
+200001ba:	8007b7f3          	csrrc	a5,0x800,a5
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\SRC\RVMSIS/core_riscv.h:156
+                   "=r"(result): "r"(0x88) : "memory");
+    return result & 0x88;
+200001be:	0887f793          	andi	a5,a5,136
+SetSysClock():
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:33
+    {
+        sys_safe_access_enable();
+200001c2:	c03e                	sw	a5,0(sp)
+200001c4:	0000100f          	fence.i
+200001c8:	400017b7          	lui	a5,0x40001
+200001cc:	05700713          	li	a4,87
+200001d0:	04e78023          	sb	a4,64(a5) # 40001040 <_eusrstack+0x1fffe040>
+200001d4:	fa800713          	li	a4,-88
+200001d8:	04e78023          	sb	a4,64(a5)
+200001dc:	0000100f          	fence.i
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:34
+        R8_CLK_SYS_CFG |= RB_CLK_SYS_MOD;
+200001e0:	2798                	lbu	a4,8(a5)
+200001e2:	0c076713          	ori	a4,a4,192
+200001e6:	a798                	sb	a4,8(a5)
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:35
+        sys_safe_access_disable();
+200001e8:	04078023          	sb	zero,64(a5)
+200001ec:	4782                	lw	a5,0(sp)
+__risc_v_enable_irq():
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\SRC\RVMSIS/core_riscv.h:138
+    __asm volatile("csrrs %0, 0x800, %1" : \
+200001ee:	8007a7f3          	csrrs	a5,0x800,a5
+SetSysClock():
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:86
+            }
+        }
+
+        sys_safe_access_enable();
+        R8_CLK_SYS_CFG = sc;
+        sys_safe_access_disable();
+200001f2:	0000100f          	fence.i
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:88
+    }
+}
+200001f6:	6105                	addi	sp,sp,32
+200001f8:	8082                	ret
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:39
+        if(!(R8_HFCK_PWR_CTRL & RB_CLK_XT32M_PON))
+200001fa:	400017b7          	lui	a5,0x40001
+200001fe:	27b8                	lbu	a4,10(a5)
+20000200:	8b11                	andi	a4,a4,4
+20000202:	eb69                	bnez	a4,200002d4 <SetSysClock+0x128>
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:41
+            x32M_c = R8_XT32M_TUNE;
+20000204:	04e7c683          	lbu	a3,78(a5) # 4000104e <_eusrstack+0x1fffe04e>
+__risc_v_disable_irq():
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\SRC\RVMSIS/core_riscv.h:154
+    __asm volatile("csrrc %0, 0x800, %1" : \
+20000208:	08800713          	li	a4,136
+SetSysClock():
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:41
+2000020c:	0ff6f693          	zext.b	a3,a3
+__risc_v_disable_irq():
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\SRC\RVMSIS/core_riscv.h:154
+20000210:	80073673          	csrrc	a2,0x800,a4
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\SRC\RVMSIS/core_riscv.h:156
+    return result & 0x88;
+20000214:	08867613          	andi	a2,a2,136
+SetSysClock():
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:42
+            sys_safe_access_enable();
+20000218:	c232                	sw	a2,4(sp)
+2000021a:	0000100f          	fence.i
+2000021e:	05700813          	li	a6,87
+20000222:	05078023          	sb	a6,64(a5)
+20000226:	fa800593          	li	a1,-88
+2000022a:	04b78023          	sb	a1,64(a5)
+2000022e:	0000100f          	fence.i
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:43
+            R8_XT32M_TUNE |= 0x03;
+20000232:	04e7c603          	lbu	a2,78(a5)
+20000236:	00366613          	ori	a2,a2,3
+2000023a:	04c78723          	sb	a2,78(a5)
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:44
+            R8_HFCK_PWR_CTRL |= RB_CLK_XT32M_PON;
+2000023e:	27b0                	lbu	a2,10(a5)
+20000240:	00466613          	ori	a2,a2,4
+20000244:	a7b0                	sb	a2,10(a5)
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:45
+            sys_safe_access_disable();
+20000246:	04078023          	sb	zero,64(a5)
+2000024a:	4612                	lw	a2,4(sp)
+__risc_v_enable_irq():
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\SRC\RVMSIS/core_riscv.h:138
+    __asm volatile("csrrs %0, 0x800, %1" : \
+2000024c:	80062673          	csrrs	a2,0x800,a2
+SetSysClock():
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:45
+20000250:	0000100f          	fence.i
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:46
+            clk_sys_cfg = R8_CLK_SYS_CFG;
+20000254:	2790                	lbu	a2,8(a5)
+20000256:	0ff67613          	zext.b	a2,a2
+__risc_v_disable_irq():
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\SRC\RVMSIS/core_riscv.h:154
+    __asm volatile("csrrc %0, 0x800, %1" : \
+2000025a:	80073773          	csrrc	a4,0x800,a4
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\SRC\RVMSIS/core_riscv.h:156
+    return result & 0x88;
+2000025e:	08877713          	andi	a4,a4,136
+SetSysClock():
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:47
+            sys_safe_access_enable();
+20000262:	c43a                	sw	a4,8(sp)
+20000264:	0000100f          	fence.i
+20000268:	05078023          	sb	a6,64(a5)
+2000026c:	04b78023          	sb	a1,64(a5)
+20000270:	0000100f          	fence.i
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:48
+            R8_CLK_SYS_CFG |= 0xC0;
+20000274:	2798                	lbu	a4,8(a5)
+20000276:	0c076713          	ori	a4,a4,192
+2000027a:	a798                	sb	a4,8(a5)
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:49
+            sys_safe_access_disable();
+2000027c:	04078023          	sb	zero,64(a5)
+20000280:	47a2                	lw	a5,8(sp)
+__risc_v_enable_irq():
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\SRC\RVMSIS/core_riscv.h:138
+    __asm volatile("csrrs %0, 0x800, %1" : \
+20000282:	8007a7f3          	csrrs	a5,0x800,a5
+SetSysClock():
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:49
+20000286:	0000100f          	fence.i
+2000028a:	47a5                	li	a5,9
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:52 (discriminator 3)
+                __nop();
+2000028c:	0001                	nop
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:50 (discriminator 3)
+            for(i=0; i<9; i++)
+2000028e:	17fd                	addi	a5,a5,-1
+20000290:	0ff7f793          	zext.b	a5,a5
+20000294:	ffe5                	bnez	a5,2000028c <SetSysClock+0xe0>
+__risc_v_disable_irq():
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\SRC\RVMSIS/core_riscv.h:154
+    __asm volatile("csrrc %0, 0x800, %1" : \
+20000296:	08800793          	li	a5,136
+2000029a:	8007b7f3          	csrrc	a5,0x800,a5
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\SRC\RVMSIS/core_riscv.h:156
+    return result & 0x88;
+2000029e:	0887f793          	andi	a5,a5,136
+SetSysClock():
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:54
+            sys_safe_access_enable();
+200002a2:	c63e                	sw	a5,12(sp)
+200002a4:	0000100f          	fence.i
+200002a8:	400017b7          	lui	a5,0x40001
+200002ac:	05700713          	li	a4,87
+200002b0:	04e78023          	sb	a4,64(a5) # 40001040 <_eusrstack+0x1fffe040>
+200002b4:	fa800713          	li	a4,-88
+200002b8:	04e78023          	sb	a4,64(a5)
+200002bc:	0000100f          	fence.i
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:55
+            R8_CLK_SYS_CFG = clk_sys_cfg;
+200002c0:	a790                	sb	a2,8(a5)
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:56
+            R8_XT32M_TUNE = x32M_c;
+200002c2:	04d78723          	sb	a3,78(a5)
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:57
+            sys_safe_access_disable();
+200002c6:	04078023          	sb	zero,64(a5)
+200002ca:	47b2                	lw	a5,12(sp)
+__risc_v_enable_irq():
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\SRC\RVMSIS/core_riscv.h:138
+    __asm volatile("csrrs %0, 0x800, %1" : \
+200002cc:	8007a7f3          	csrrs	a5,0x800,a5
+SetSysClock():
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:57
+200002d0:	0000100f          	fence.i
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:60
+        if((sc & RB_CLK_SYS_MOD) == 0x40) // PLL div
+200002d4:	0c057793          	andi	a5,a0,192
+200002d8:	04000713          	li	a4,64
+200002dc:	08e79963          	bne	a5,a4,2000036e <SetSysClock+0x1c2>
+__risc_v_disable_irq():
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\SRC\RVMSIS/core_riscv.h:154
+    __asm volatile("csrrc %0, 0x800, %1" : \
+200002e0:	08800793          	li	a5,136
+200002e4:	8007b7f3          	csrrc	a5,0x800,a5
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\SRC\RVMSIS/core_riscv.h:156
+    return result & 0x88;
+200002e8:	0887f793          	andi	a5,a5,136
+SetSysClock():
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:62
+            sys_safe_access_enable();
+200002ec:	c83e                	sw	a5,16(sp)
+200002ee:	0000100f          	fence.i
+200002f2:	400017b7          	lui	a5,0x40001
+200002f6:	05700713          	li	a4,87
+200002fa:	04e78023          	sb	a4,64(a5) # 40001040 <_eusrstack+0x1fffe040>
+200002fe:	fa800713          	li	a4,-88
+20000302:	04e78023          	sb	a4,64(a5)
+20000306:	0000100f          	fence.i
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:63
+            R8_HFCK_PWR_CTRL |= RB_CLK_PLL_PON;
+2000030a:	27b8                	lbu	a4,10(a5)
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:64
+            R8_FLASH_CFG = 0X01;
+2000030c:	4685                	li	a3,1
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:63
+            R8_HFCK_PWR_CTRL |= RB_CLK_PLL_PON;
+2000030e:	01076713          	ori	a4,a4,16
+20000312:	a7b8                	sb	a4,10(a5)
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:64
+            R8_FLASH_CFG = 0X01;
+20000314:	40002737          	lui	a4,0x40002
+20000318:	80d703a3          	sb	a3,-2041(a4) # 40001807 <_eusrstack+0x1fffe807>
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:65
+            R8_FLASH_SCK |= 1<<4; //50M
+2000031c:	80574683          	lbu	a3,-2043(a4)
+20000320:	0106e693          	ori	a3,a3,16
+20000324:	80d702a3          	sb	a3,-2043(a4)
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:66
+            sys_safe_access_disable();
+20000328:	04078023          	sb	zero,64(a5)
+2000032c:	47c2                	lw	a5,16(sp)
+__risc_v_enable_irq():
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\SRC\RVMSIS/core_riscv.h:138
+    __asm volatile("csrrs %0, 0x800, %1" : \
+2000032e:	8007a7f3          	csrrs	a5,0x800,a5
+SetSysClock():
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:80
+                sys_safe_access_disable();
+20000332:	0000100f          	fence.i
+__risc_v_disable_irq():
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\SRC\RVMSIS/core_riscv.h:154
+    __asm volatile("csrrc %0, 0x800, %1" : \
+20000336:	08800793          	li	a5,136
+2000033a:	8007b7f3          	csrrc	a5,0x800,a5
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\SRC\RVMSIS/core_riscv.h:156
+    return result & 0x88;
+2000033e:	0887f793          	andi	a5,a5,136
+SetSysClock():
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:84
+        sys_safe_access_enable();
+20000342:	ce3e                	sw	a5,28(sp)
+20000344:	0000100f          	fence.i
+20000348:	400017b7          	lui	a5,0x40001
+2000034c:	05700713          	li	a4,87
+20000350:	04e78023          	sb	a4,64(a5) # 40001040 <_eusrstack+0x1fffe040>
+20000354:	fa800713          	li	a4,-88
+20000358:	04e78023          	sb	a4,64(a5)
+2000035c:	0000100f          	fence.i
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:85
+        R8_CLK_SYS_CFG = sc;
+20000360:	0ff57513          	zext.b	a0,a0
+20000364:	a788                	sb	a0,8(a5)
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:86
+        sys_safe_access_disable();
+20000366:	04078023          	sb	zero,64(a5)
+2000036a:	47f2                	lw	a5,28(sp)
+2000036c:	b549                	j	200001ee <SetSysClock+0x42>
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:70
+            if((sc&0x1F) )
+2000036e:	01f57793          	andi	a5,a0,31
+20000372:	cf9d                	beqz	a5,200003b0 <SetSysClock+0x204>
+__risc_v_disable_irq():
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\SRC\RVMSIS/core_riscv.h:154
+    __asm volatile("csrrc %0, 0x800, %1" : \
+20000374:	08800793          	li	a5,136
+20000378:	8007b7f3          	csrrc	a5,0x800,a5
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\SRC\RVMSIS/core_riscv.h:156
+    return result & 0x88;
+2000037c:	0887f793          	andi	a5,a5,136
+SetSysClock():
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:72
+                sys_safe_access_enable();
+20000380:	ca3e                	sw	a5,20(sp)
+20000382:	0000100f          	fence.i
+20000386:	400017b7          	lui	a5,0x40001
+2000038a:	05700713          	li	a4,87
+2000038e:	04e78023          	sb	a4,64(a5) # 40001040 <_eusrstack+0x1fffe040>
+20000392:	fa800713          	li	a4,-88
+20000396:	04e78023          	sb	a4,64(a5)
+2000039a:	0000100f          	fence.i
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:73
+                R8_FLASH_CFG = 0X02;
+2000039e:	40002737          	lui	a4,0x40002
+200003a2:	4689                	li	a3,2
+200003a4:	80d703a3          	sb	a3,-2041(a4) # 40001807 <_eusrstack+0x1fffe807>
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:74
+                sys_safe_access_disable();
+200003a8:	04078023          	sb	zero,64(a5)
+200003ac:	47d2                	lw	a5,20(sp)
+__risc_v_enable_irq():
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\SRC\RVMSIS/core_riscv.h:138
+    __asm volatile("csrrs %0, 0x800, %1" : \
+200003ae:	b741                	j	2000032e <SetSysClock+0x182>
+__risc_v_disable_irq():
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\SRC\RVMSIS/core_riscv.h:154
+    __asm volatile("csrrc %0, 0x800, %1" : \
+200003b0:	08800793          	li	a5,136
+200003b4:	8007b7f3          	csrrc	a5,0x800,a5
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\SRC\RVMSIS/core_riscv.h:156
+    return result & 0x88;
+200003b8:	0887f793          	andi	a5,a5,136
+SetSysClock():
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:78
+                sys_safe_access_enable();
+200003bc:	cc3e                	sw	a5,24(sp)
+200003be:	0000100f          	fence.i
+200003c2:	400017b7          	lui	a5,0x40001
+200003c6:	05700713          	li	a4,87
+200003ca:	04e78023          	sb	a4,64(a5) # 40001040 <_eusrstack+0x1fffe040>
+200003ce:	fa800713          	li	a4,-88
+200003d2:	04e78023          	sb	a4,64(a5)
+200003d6:	0000100f          	fence.i
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:79
+                R8_FLASH_CFG = 0X07;
+200003da:	40002737          	lui	a4,0x40002
+200003de:	469d                	li	a3,7
+200003e0:	80d703a3          	sb	a3,-2041(a4) # 40001807 <_eusrstack+0x1fffe807>
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:80
+                sys_safe_access_disable();
+200003e4:	04078023          	sb	zero,64(a5)
+200003e8:	47e2                	lw	a5,24(sp)
+200003ea:	b791                	j	2000032e <SetSysClock+0x182>
+
+200003ec <HardFault_Handler>:
+HardFault_Handler():
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:282
+ */
+__INTERRUPT
+__HIGH_CODE
+__attribute__((weak))
+void HardFault_Handler(void)
+{
+200003ec:	1141                	addi	sp,sp,-16
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:283
+    FLASH_ROM_SW_RESET();
+200003ee:	4681                	li	a3,0
+200003f0:	4601                	li	a2,0
+200003f2:	4581                	li	a1,0
+200003f4:	4511                	li	a0,4
+200003f6:	e0000097          	auipc	ra,0xe0000
+200003fa:	64a080e7          	jalr	1610(ra) # a40 <FLASH_EEPROM_CMD>
+__risc_v_disable_irq():
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\SRC\RVMSIS/core_riscv.h:154
+    __asm volatile("csrrc %0, 0x800, %1" : \
+200003fe:	08800713          	li	a4,136
+20000402:	800737f3          	csrrc	a5,0x800,a4
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\SRC\RVMSIS/core_riscv.h:156
+    return result & 0x88;
+20000406:	0887f793          	andi	a5,a5,136
+HardFault_Handler():
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:284
+    sys_safe_access_enable();
+2000040a:	c43e                	sw	a5,8(sp)
+2000040c:	0000100f          	fence.i
+20000410:	400017b7          	lui	a5,0x40001
+20000414:	05700613          	li	a2,87
+20000418:	04c78023          	sb	a2,64(a5) # 40001040 <_eusrstack+0x1fffe040>
+2000041c:	fa800693          	li	a3,-88
+20000420:	04d78023          	sb	a3,64(a5)
+20000424:	0000100f          	fence.i
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:285
+    R16_INT_LSI_TUNE = 0xFFFF;
+20000428:	55fd                	li	a1,-1
+2000042a:	b7ce                	sh	a1,44(a5)
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:286
+    sys_safe_access_disable();
+2000042c:	04078023          	sb	zero,64(a5)
+20000430:	45a2                	lw	a1,8(sp)
+__risc_v_enable_irq():
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\SRC\RVMSIS/core_riscv.h:138
+    __asm volatile("csrrs %0, 0x800, %1" : \
+20000432:	8005a5f3          	csrrs	a1,0x800,a1
+HardFault_Handler():
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:286
+20000436:	0000100f          	fence.i
+__risc_v_disable_irq():
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\SRC\RVMSIS/core_riscv.h:154
+    __asm volatile("csrrc %0, 0x800, %1" : \
+2000043a:	80073773          	csrrc	a4,0x800,a4
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\SRC\RVMSIS/core_riscv.h:156
+    return result & 0x88;
+2000043e:	08877713          	andi	a4,a4,136
+HardFault_Handler():
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:287
+    sys_safe_access_enable();
+20000442:	c63a                	sw	a4,12(sp)
+20000444:	0000100f          	fence.i
+20000448:	04c78023          	sb	a2,64(a5)
+2000044c:	04d78023          	sb	a3,64(a5)
+20000450:	0000100f          	fence.i
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:288
+    R8_RST_WDOG_CTRL |= RB_SOFTWARE_RESET;
+20000454:	0467c703          	lbu	a4,70(a5)
+20000458:	00176713          	ori	a4,a4,1
+2000045c:	04e78323          	sb	a4,70(a5)
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:289
+    sys_safe_access_disable();
+20000460:	04078023          	sb	zero,64(a5)
+20000464:	47b2                	lw	a5,12(sp)
+__risc_v_enable_irq():
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\SRC\RVMSIS/core_riscv.h:138
+    __asm volatile("csrrs %0, 0x800, %1" : \
+20000466:	8007a7f3          	csrrs	a5,0x800,a5
+HardFault_Handler():
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:289
+2000046a:	0000100f          	fence.i
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:290 (discriminator 1)
+    while(1);
+2000046e:	a001                	j	2000046e <HardFault_Handler+0x82>
+
+20000470 <FLASH_ROM_BEG_FF>:
+FLASH_ROM_BEG_FF():
+20000470:	80040323          	sb	zero,-2042(s0)
+20000474:	4715                	li	a4,5
+20000476:	87a2                	mv	a5,s0
+20000478:	80e40323          	sb	a4,-2042(s0)
+2000047c:	0001                	nop
+2000047e:	0001                	nop
+20000480:	80a40223          	sb	a0,-2044(s0)
+20000484:	8067c703          	lbu	a4,-2042(a5)
+20000488:	0762                	slli	a4,a4,0x18
+2000048a:	8761                	srai	a4,a4,0x18
+2000048c:	fe074ce3          	bltz	a4,20000484 <FLASH_ROM_BEG_FF+0x14>
+20000490:	80a78223          	sb	a0,-2044(a5)
+20000494:	8722                	mv	a4,s0
+20000496:	80674783          	lbu	a5,-2042(a4)
+2000049a:	07e2                	slli	a5,a5,0x18
+2000049c:	87e1                	srai	a5,a5,0x18
+2000049e:	fe07cce3          	bltz	a5,20000496 <FLASH_ROM_BEG_FF+0x26>
+200004a2:	8082                	ret
+
+200004a4 <FLASH_ROM_BEG>:
+FLASH_ROM_BEG():
+200004a4:	80040323          	sb	zero,-2042(s0)
+200004a8:	4715                	li	a4,5
+200004aa:	80e40323          	sb	a4,-2042(s0)
+200004ae:	0001                	nop
+200004b0:	0001                	nop
+200004b2:	80a40223          	sb	a0,-2044(s0)
+200004b6:	8082                	ret
+
+200004b8 <FLASH_ROM_END>:
+FLASH_ROM_END():
+200004b8:	80640783          	lb	a5,-2042(s0)
+200004bc:	fe07cee3          	bltz	a5,200004b8 <FLASH_ROM_END>
+200004c0:	80040323          	sb	zero,-2042(s0)
+200004c4:	8082                	ret
+
+200004c6 <FLASH_ROM_IN>:
+FLASH_ROM_IN():
+200004c6:	80640783          	lb	a5,-2042(s0)
+200004ca:	fe07cee3          	bltz	a5,200004c6 <FLASH_ROM_IN>
+200004ce:	80444503          	lbu	a0,-2044(s0)
+200004d2:	8082                	ret
+
+200004d4 <FLASH_ROM_OUT>:
+FLASH_ROM_OUT():
+200004d4:	80640783          	lb	a5,-2042(s0)
+200004d8:	fe07cee3          	bltz	a5,200004d4 <FLASH_ROM_OUT>
+200004dc:	80a40223          	sb	a0,-2044(s0)
+200004e0:	8082                	ret
+
+200004e2 <FLASH_ROM_ADDR>:
+FLASH_ROM_ADDR():
+200004e2:	1141                	addi	sp,sp,-16
+200004e4:	c426                	sw	s1,8(sp)
+200004e6:	c24a                	sw	s2,4(sp)
+200004e8:	c04e                	sw	s3,0(sp)
+200004ea:	c606                	sw	ra,12(sp)
+200004ec:	0bf57713          	andi	a4,a0,191
+200004f0:	47ad                	li	a5,11
+200004f2:	89aa                	mv	s3,a0
+200004f4:	892e                	mv	s2,a1
+200004f6:	4495                	li	s1,5
+200004f8:	00f70663          	beq	a4,a5,20000504 <FLASH_ROM_ADDR+0x22>
+200004fc:	4519                	li	a0,6
+200004fe:	375d                	jal	200004a4 <FLASH_ROM_BEG>
+20000500:	3f65                	jal	200004b8 <FLASH_ROM_END>
+20000502:	448d                	li	s1,3
+20000504:	854e                	mv	a0,s3
+20000506:	3f79                	jal	200004a4 <FLASH_ROM_BEG>
+20000508:	59fd                	li	s3,-1
+2000050a:	14fd                	addi	s1,s1,-1
+2000050c:	01349863          	bne	s1,s3,2000051c <FLASH_ROM_ADDR+0x3a>
+20000510:	40b2                	lw	ra,12(sp)
+20000512:	44a2                	lw	s1,8(sp)
+20000514:	4912                	lw	s2,4(sp)
+20000516:	4982                	lw	s3,0(sp)
+20000518:	0141                	addi	sp,sp,16
+2000051a:	8082                	ret
+2000051c:	01095513          	srli	a0,s2,0x10
+20000520:	0ff57513          	zext.b	a0,a0
+20000524:	3f45                	jal	200004d4 <FLASH_ROM_OUT>
+20000526:	0922                	slli	s2,s2,0x8
+20000528:	b7cd                	j	2000050a <FLASH_ROM_ADDR+0x28>
+
+2000052a <FLASH_ROM_WAIT>:
+FLASH_ROM_WAIT():
+2000052a:	1101                	addi	sp,sp,-32
+2000052c:	cc26                	sw	s1,24(sp)
+2000052e:	ce06                	sw	ra,28(sp)
+20000530:	000804b7          	lui	s1,0x80
+20000534:	3751                	jal	200004b8 <FLASH_ROM_END>
+20000536:	4515                	li	a0,5
+20000538:	37b5                	jal	200004a4 <FLASH_ROM_BEG>
+2000053a:	3771                	jal	200004c6 <FLASH_ROM_IN>
+2000053c:	3769                	jal	200004c6 <FLASH_ROM_IN>
+2000053e:	c62a                	sw	a0,12(sp)
+20000540:	3fa5                	jal	200004b8 <FLASH_ROM_END>
+20000542:	4532                	lw	a0,12(sp)
+20000544:	00157793          	andi	a5,a0,1
+20000548:	eb89                	bnez	a5,2000055a <FLASH_ROM_WAIT+0x30>
+2000054a:	00156513          	ori	a0,a0,1
+2000054e:	0ff57513          	zext.b	a0,a0
+20000552:	40f2                	lw	ra,28(sp)
+20000554:	44e2                	lw	s1,24(sp)
+20000556:	6105                	addi	sp,sp,32
+20000558:	8082                	ret
+2000055a:	14fd                	addi	s1,s1,-1 # 7ffff <_data_lma+0x7f46f>
+2000055c:	fce9                	bnez	s1,20000536 <FLASH_ROM_WAIT+0xc>
+2000055e:	4501                	li	a0,0
+20000560:	bfcd                	j	20000552 <FLASH_ROM_WAIT+0x28>
+
+20000562 <FLASH_START>:
+FLASH_START():
+20000562:	1141                	addi	sp,sp,-16
+20000564:	c606                	sw	ra,12(sp)
+20000566:	400017b7          	lui	a5,0x40001
+2000056a:	05700713          	li	a4,87
+2000056e:	04e78023          	sb	a4,64(a5) # 40001040 <_eusrstack+0x1fffe040>
+20000572:	fa800713          	li	a4,-88
+20000576:	04e78023          	sb	a4,64(a5)
+2000057a:	0447c703          	lbu	a4,68(a5)
+2000057e:	0ff00513          	li	a0,255
+20000582:	0e076713          	ori	a4,a4,224
+20000586:	04e78223          	sb	a4,68(a5)
+2000058a:	4791                	li	a5,4
+2000058c:	80f40323          	sb	a5,-2042(s0)
+20000590:	35c5                	jal	20000470 <FLASH_ROM_BEG_FF>
+20000592:	40b2                	lw	ra,12(sp)
+20000594:	0141                	addi	sp,sp,16
+20000596:	b70d                	j	200004b8 <FLASH_ROM_END>
+
+20000598 <FLASH_CMD_ROM_WRITE>:
+FLASH_CMD_ROM_WRITE():
+20000598:	1101                	addi	sp,sp,-32
+2000059a:	cc26                	sw	s1,24(sp)
+2000059c:	ca4a                	sw	s2,20(sp)
+2000059e:	c84e                	sw	s3,16(sp)
+200005a0:	c652                	sw	s4,12(sp)
+200005a2:	ce06                	sw	ra,28(sp)
+200005a4:	892a                	mv	s2,a0
+200005a6:	89ae                	mv	s3,a1
+200005a8:	84b2                	mv	s1,a2
+200005aa:	4a55                	li	s4,21
+200005ac:	3f5d                	jal	20000562 <FLASH_START>
+200005ae:	e891                	bnez	s1,200005c2 <FLASH_CMD_ROM_WRITE+0x2a>
+200005b0:	3721                	jal	200004b8 <FLASH_ROM_END>
+200005b2:	40f2                	lw	ra,28(sp)
+200005b4:	8526                	mv	a0,s1
+200005b6:	4952                	lw	s2,20(sp)
+200005b8:	44e2                	lw	s1,24(sp)
+200005ba:	49c2                	lw	s3,16(sp)
+200005bc:	4a32                	lw	s4,12(sp)
+200005be:	6105                	addi	sp,sp,32
+200005c0:	8082                	ret
+200005c2:	85ca                	mv	a1,s2
+200005c4:	4509                	li	a0,2
+200005c6:	3f31                	jal	200004e2 <FLASH_ROM_ADDR>
+200005c8:	0991                	addi	s3,s3,4
+200005ca:	ffc9a703          	lw	a4,-4(s3)
+200005ce:	4791                	li	a5,4
+200005d0:	80e42023          	sw	a4,-2048(s0)
+
+200005d4 <.loop247>:
+200005d4:	80640703          	lb	a4,-2042(s0)
+200005d8:	fe074ee3          	bltz	a4,200005d4 <.loop247>
+200005dc:	81440323          	sb	s4,-2042(s0)
+200005e0:	17fd                	addi	a5,a5,-1
+200005e2:	fbed                	bnez	a5,200005d4 <.loop247>
+200005e4:	14fd                	addi	s1,s1,-1
+200005e6:	0911                	addi	s2,s2,4
+200005e8:	c481                	beqz	s1,200005f0 <.loop247+0x1c>
+200005ea:	0ff97793          	zext.b	a5,s2
+200005ee:	ffe9                	bnez	a5,200005c8 <FLASH_CMD_ROM_WRITE+0x30>
+200005f0:	3f2d                	jal	2000052a <FLASH_ROM_WAIT>
+200005f2:	fd55                	bnez	a0,200005ae <FLASH_CMD_ROM_WRITE+0x16>
+200005f4:	54fd                	li	s1,-1
+200005f6:	bf75                	j	200005b2 <FLASH_CMD_ROM_WRITE+0x1a>
+
+200005f8 <FLASH_CMD_ROM_ERASE>:
+FLASH_CMD_ROM_ERASE():
+200005f8:	1101                	addi	sp,sp,-32
+200005fa:	cc26                	sw	s1,24(sp)
+200005fc:	ca4a                	sw	s2,20(sp)
+200005fe:	c84e                	sw	s3,16(sp)
+20000600:	c652                	sw	s4,12(sp)
+20000602:	c456                	sw	s5,8(sp)
+20000604:	c25a                	sw	s6,4(sp)
+20000606:	ce06                	sw	ra,28(sp)
+20000608:	892a                	mv	s2,a0
+2000060a:	8a32                	mv	s4,a2
+2000060c:	498d                	li	s3,3
+2000060e:	3f91                	jal	20000562 <FLASH_START>
+20000610:	64c1                	lui	s1,0x10
+20000612:	6ac1                	lui	s5,0x10
+20000614:	6b05                	lui	s6,0x1
+20000616:	fff48793          	addi	a5,s1,-1 # ffff <_data_lma+0xf46f>
+2000061a:	0127f7b3          	and	a5,a5,s2
+2000061e:	e399                	bnez	a5,20000624 <FLASH_CMD_ROM_ERASE+0x2c>
+20000620:	029a7163          	bgeu	s4,s1,20000642 <FLASH_CMD_ROM_ERASE+0x4a>
+20000624:	19fd                	addi	s3,s3,-1
+20000626:	8091                	srli	s1,s1,0x4
+20000628:	fe0997e3          	bnez	s3,20000616 <FLASH_CMD_ROM_ERASE+0x1e>
+2000062c:	3571                	jal	200004b8 <FLASH_ROM_END>
+2000062e:	4501                	li	a0,0
+20000630:	40f2                	lw	ra,28(sp)
+20000632:	44e2                	lw	s1,24(sp)
+20000634:	4952                	lw	s2,20(sp)
+20000636:	49c2                	lw	s3,16(sp)
+20000638:	4a32                	lw	s4,12(sp)
+2000063a:	4aa2                	lw	s5,8(sp)
+2000063c:	4b12                	lw	s6,4(sp)
+2000063e:	6105                	addi	sp,sp,32
+20000640:	8082                	ret
+20000642:	0d800513          	li	a0,216
+20000646:	01548863          	beq	s1,s5,20000656 <FLASH_CMD_ROM_ERASE+0x5e>
+2000064a:	02000513          	li	a0,32
+2000064e:	01648463          	beq	s1,s6,20000656 <FLASH_CMD_ROM_ERASE+0x5e>
+20000652:	08100513          	li	a0,129
+20000656:	85ca                	mv	a1,s2
+20000658:	3569                	jal	200004e2 <FLASH_ROM_ADDR>
+2000065a:	3dc1                	jal	2000052a <FLASH_ROM_WAIT>
+2000065c:	c509                	beqz	a0,20000666 <FLASH_CMD_ROM_ERASE+0x6e>
+2000065e:	9926                	add	s2,s2,s1
+20000660:	409a0a33          	sub	s4,s4,s1
+20000664:	bf75                	j	20000620 <FLASH_CMD_ROM_ERASE+0x28>
+20000666:	557d                	li	a0,-1
+20000668:	b7e1                	j	20000630 <FLASH_CMD_ROM_ERASE+0x38>
+
+2000066a <FLASH_CMD_ROM_VERIFY>:
+FLASH_CMD_ROM_VERIFY():
+2000066a:	1101                	addi	sp,sp,-32
+2000066c:	ce06                	sw	ra,28(sp)
+2000066e:	cc26                	sw	s1,24(sp)
+20000670:	ca4a                	sw	s2,20(sp)
+20000672:	84b2                	mv	s1,a2
+20000674:	c84e                	sw	s3,16(sp)
+20000676:	c62a                	sw	a0,12(sp)
+20000678:	892e                	mv	s2,a1
+2000067a:	35e5                	jal	20000562 <FLASH_START>
+2000067c:	4532                	lw	a0,12(sp)
+2000067e:	14fd                	addi	s1,s1,-1
+20000680:	59fd                	li	s3,-1
+20000682:	85aa                	mv	a1,a0
+20000684:	452d                	li	a0,11
+20000686:	3db1                	jal	200004e2 <FLASH_ROM_ADDR>
+20000688:	01349a63          	bne	s1,s3,2000069c <FLASH_CMD_ROM_VERIFY+0x32>
+2000068c:	3535                	jal	200004b8 <FLASH_ROM_END>
+2000068e:	40f2                	lw	ra,28(sp)
+20000690:	8526                	mv	a0,s1
+20000692:	4952                	lw	s2,20(sp)
+20000694:	44e2                	lw	s1,24(sp)
+20000696:	49c2                	lw	s3,16(sp)
+20000698:	6105                	addi	sp,sp,32
+2000069a:	8082                	ret
+2000069c:	352d                	jal	200004c6 <FLASH_ROM_IN>
+2000069e:	0034f793          	andi	a5,s1,3
+200006a2:	eb91                	bnez	a5,200006b6 <FLASH_CMD_ROM_VERIFY+0x4c>
+200006a4:	80042683          	lw	a3,-2048(s0)
+200006a8:	00092703          	lw	a4,0(s2)
+200006ac:	00490793          	addi	a5,s2,4
+200006b0:	fce69ee3          	bne	a3,a4,2000068c <FLASH_CMD_ROM_VERIFY+0x22>
+200006b4:	893e                	mv	s2,a5
+200006b6:	14fd                	addi	s1,s1,-1
+200006b8:	bfc1                	j	20000688 <FLASH_CMD_ROM_VERIFY+0x1e>
+
+200006ba <FLASH_CMD_ROM_PWR>:
+FLASH_CMD_ROM_PWR():
+200006ba:	1101                	addi	sp,sp,-32
+200006bc:	ce06                	sw	ra,28(sp)
+200006be:	c62a                	sw	a0,12(sp)
+200006c0:	354d                	jal	20000562 <FLASH_START>
+200006c2:	4532                	lw	a0,12(sp)
+200006c4:	33c5                	jal	200004a4 <FLASH_ROM_BEG>
+200006c6:	40f2                	lw	ra,28(sp)
+200006c8:	6105                	addi	sp,sp,32
+200006ca:	b3fd                	j	200004b8 <FLASH_ROM_END>
+
+200006cc <FLASH_CMD_GET_ROM_INFO>:
+FLASH_CMD_GET_ROM_INFO():
+200006cc:	1101                	addi	sp,sp,-32
+200006ce:	ce06                	sw	ra,28(sp)
+200006d0:	cc26                	sw	s1,24(sp)
+200006d2:	ca4a                	sw	s2,20(sp)
+200006d4:	c84e                	sw	s3,16(sp)
+200006d6:	c652                	sw	s4,12(sp)
+200006d8:	89aa                	mv	s3,a0
+200006da:	c456                	sw	s5,8(sp)
+200006dc:	892e                	mv	s2,a1
+200006de:	3551                	jal	20000562 <FLASH_START>
+200006e0:	000405b7          	lui	a1,0x40
+200006e4:	00b9e5b3          	or	a1,s3,a1
+200006e8:	452d                	li	a0,11
+200006ea:	3be5                	jal	200004e2 <FLASH_ROM_ADDR>
+200006ec:	4481                	li	s1,0
+200006ee:	4a8d                	li	s5,3
+200006f0:	4a21                	li	s4,8
+200006f2:	3bd1                	jal	200004c6 <FLASH_ROM_IN>
+200006f4:	01549663          	bne	s1,s5,20000700 <FLASH_CMD_GET_ROM_INFO+0x34>
+200006f8:	80042783          	lw	a5,-2048(s0)
+200006fc:	00f92023          	sw	a5,0(s2)
+20000700:	0485                	addi	s1,s1,1
+20000702:	ff4498e3          	bne	s1,s4,200006f2 <FLASH_CMD_GET_ROM_INFO+0x26>
+20000706:	80042783          	lw	a5,-2048(s0)
+2000070a:	01299713          	slli	a4,s3,0x12
+2000070e:	00075c63          	bgez	a4,20000726 <FLASH_CMD_GET_ROM_INFO+0x5a>
+20000712:	00f91223          	sh	a5,4(s2)
+20000716:	40f2                	lw	ra,28(sp)
+20000718:	44e2                	lw	s1,24(sp)
+2000071a:	4952                	lw	s2,20(sp)
+2000071c:	49c2                	lw	s3,16(sp)
+2000071e:	4a32                	lw	s4,12(sp)
+20000720:	4aa2                	lw	s5,8(sp)
+20000722:	6105                	addi	sp,sp,32
+20000724:	bb51                	j	200004b8 <FLASH_ROM_END>
+20000726:	00f92223          	sw	a5,4(s2)
+2000072a:	b7f5                	j	20000716 <FLASH_CMD_GET_ROM_INFO+0x4a>
+
+2000072c <FLASH_CMD_GET_UNIQUE_ID>:
+FLASH_CMD_GET_UNIQUE_ID():
+2000072c:	1141                	addi	sp,sp,-16
+2000072e:	c606                	sw	ra,12(sp)
+20000730:	c426                	sw	s1,8(sp)
+20000732:	c24a                	sw	s2,4(sp)
+20000734:	c04e                	sw	s3,0(sp)
+20000736:	89ae                	mv	s3,a1
+20000738:	352d                	jal	20000562 <FLASH_START>
+2000073a:	4581                	li	a1,0
+2000073c:	04b00513          	li	a0,75
+20000740:	334d                	jal	200004e2 <FLASH_ROM_ADDR>
+20000742:	44bd                	li	s1,15
+20000744:	597d                	li	s2,-1
+20000746:	3341                	jal	200004c6 <FLASH_ROM_IN>
+20000748:	0074f793          	andi	a5,s1,7
+2000074c:	97ce                	add	a5,a5,s3
+2000074e:	0007c703          	lbu	a4,0(a5)
+20000752:	14fd                	addi	s1,s1,-1
+20000754:	8d39                	xor	a0,a0,a4
+20000756:	00a78023          	sb	a0,0(a5)
+2000075a:	ff2496e3          	bne	s1,s2,20000746 <FLASH_CMD_GET_UNIQUE_ID+0x1a>
+2000075e:	40b2                	lw	ra,12(sp)
+20000760:	44a2                	lw	s1,8(sp)
+20000762:	4912                	lw	s2,4(sp)
+20000764:	4982                	lw	s3,0(sp)
+20000766:	0141                	addi	sp,sp,16
+20000768:	bb81                	j	200004b8 <FLASH_ROM_END>
+
+2000076a <FLASH_CMD_ROM_SW_RESET>:
+FLASH_CMD_ROM_SW_RESET():
+2000076a:	1141                	addi	sp,sp,-16
+2000076c:	c606                	sw	ra,12(sp)
+2000076e:	3bd5                	jal	20000562 <FLASH_START>
+20000770:	06600513          	li	a0,102
+20000774:	3b05                	jal	200004a4 <FLASH_ROM_BEG>
+20000776:	3389                	jal	200004b8 <FLASH_ROM_END>
+20000778:	09900513          	li	a0,153
+2000077c:	3325                	jal	200004a4 <FLASH_ROM_BEG>
+2000077e:	40b2                	lw	ra,12(sp)
+20000780:	0141                	addi	sp,sp,16
+20000782:	bb1d                	j	200004b8 <FLASH_ROM_END>
+
+Disassembly of section .text:
+
+00000788 <handle_reset>:
+handle_reset():
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/Startup/startup_CH572.S:119
+	.weak	handle_reset
+	.align	1
+handle_reset:
+.option push 
+.option	norelax 
+	la gp, __global_pointer$
+ 788:	20001197          	auipc	gp,0x20001
+ 78c:	81018193          	addi	gp,gp,-2032 # 20000f98 <__global_pointer$>
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/Startup/startup_CH572.S:121
+1:
+	la sp, _eusrstack 
+ 790:	20003117          	auipc	sp,0x20003
+ 794:	87010113          	addi	sp,sp,-1936 # 20003000 <_eusrstack>
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/Startup/startup_CH572.S:126
+.option	pop
+
+/* Load highcode code  section from flash to RAM */
+2:
+    la a0, _highcode_lma
+ 798:	00400513          	li	a0,4
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/Startup/startup_CH572.S:127
+    la a1, _highcode_vma_start
+ 79c:	20000597          	auipc	a1,0x20000
+ 7a0:	86458593          	addi	a1,a1,-1948 # 20000000 <_highcode_vma_start>
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/Startup/startup_CH572.S:128
+    la a2, _highcode_vma_end
+ 7a4:	20000617          	auipc	a2,0x20000
+ 7a8:	fe060613          	addi	a2,a2,-32 # 20000784 <TxBuff>
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/Startup/startup_CH572.S:129
+    bgeu a1, a2, 2f
+ 7ac:	00c5fa63          	bgeu	a1,a2,7c0 <handle_reset+0x38>
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/Startup/startup_CH572.S:131
+1:
+    lw t0, (a0)
+ 7b0:	00052283          	lw	t0,0(a0)
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/Startup/startup_CH572.S:132
+    sw t0, (a1)
+ 7b4:	0055a023          	sw	t0,0(a1)
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/Startup/startup_CH572.S:133
+    addi a0, a0, 4
+ 7b8:	0511                	addi	a0,a0,4
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/Startup/startup_CH572.S:134
+    addi a1, a1, 4
+ 7ba:	0591                	addi	a1,a1,4
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/Startup/startup_CH572.S:135
+    bltu a1, a2, 1b
+ 7bc:	fec5eae3          	bltu	a1,a2,7b0 <handle_reset+0x28>
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/Startup/startup_CH572.S:139
+
+/* Load data section from flash to RAM */
+2:
+	la a0, _data_lma
+ 7c0:	00000517          	auipc	a0,0x0
+ 7c4:	3d050513          	addi	a0,a0,976 # b90 <_data_lma>
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/Startup/startup_CH572.S:140
+	la a1, _data_vma
+ 7c8:	20000597          	auipc	a1,0x20000
+ 7cc:	fbc58593          	addi	a1,a1,-68 # 20000784 <TxBuff>
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/Startup/startup_CH572.S:141
+	la a2, _edata
+ 7d0:	20000617          	auipc	a2,0x20000
+ 7d4:	fc860613          	addi	a2,a2,-56 # 20000798 <trigB>
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/Startup/startup_CH572.S:142
+	bgeu a1, a2, 2f
+ 7d8:	00c5fa63          	bgeu	a1,a2,7ec <handle_reset+0x64>
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/Startup/startup_CH572.S:144
+1:
+	lw t0, (a0)
+ 7dc:	00052283          	lw	t0,0(a0)
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/Startup/startup_CH572.S:145
+	sw t0, (a1)
+ 7e0:	0055a023          	sw	t0,0(a1)
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/Startup/startup_CH572.S:146
+	addi a0, a0, 4
+ 7e4:	0511                	addi	a0,a0,4
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/Startup/startup_CH572.S:147
+	addi a1, a1, 4
+ 7e6:	0591                	addi	a1,a1,4
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/Startup/startup_CH572.S:148
+	bltu a1, a2, 1b
+ 7e8:	fec5eae3          	bltu	a1,a2,7dc <handle_reset+0x54>
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/Startup/startup_CH572.S:151
+2:
+	/* clear bss section */
+	la a0, _sbss
+ 7ec:	20000517          	auipc	a0,0x20000
+ 7f0:	fac50513          	addi	a0,a0,-84 # 20000798 <trigB>
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/Startup/startup_CH572.S:152
+	la a1, _ebss
+ 7f4:	86c18593          	addi	a1,gp,-1940 # 20000804 <_ebss>
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/Startup/startup_CH572.S:153
+	bgeu a0, a1, 2f
+ 7f8:	00b57763          	bgeu	a0,a1,806 <handle_reset+0x7e>
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/Startup/startup_CH572.S:155
+1:
+	sw zero, (a0)
+ 7fc:	00052023          	sw	zero,0(a0)
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/Startup/startup_CH572.S:156
+	addi a0, a0, 4
+ 800:	0511                	addi	a0,a0,4
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/Startup/startup_CH572.S:157
+	bltu a0, a1, 1b
+ 802:	feb56de3          	bltu	a0,a1,7fc <handle_reset+0x74>
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/Startup/startup_CH572.S:161
+2:
+	/* 用户模式中断使能 */
+	/*预取使能*/
+	li t0, 0x25
+ 806:	02500293          	li	t0,37
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/Startup/startup_CH572.S:162
+	csrw 0xbc0, t0
+ 80a:	bc029073          	csrw	0xbc0,t0
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/Startup/startup_CH572.S:164
+	/* 打开嵌套中断、硬件压栈功能 */
+	li t0, 0x3
+ 80e:	428d                	li	t0,3
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/Startup/startup_CH572.S:165
+	csrw 0x804, t0
+ 810:	80429073          	csrw	0x804,t0
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/Startup/startup_CH572.S:166
+	li t0, 0x1
+ 814:	4285                	li	t0,1
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/Startup/startup_CH572.S:167
+	csrw 0xbc1, t0
+ 816:	bc129073          	csrw	0xbc1,t0
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/Startup/startup_CH572.S:169
+	
+    li t0, 0x88
+ 81a:	08800293          	li	t0,136
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/Startup/startup_CH572.S:170
+    csrw mstatus, t0
+ 81e:	30029073          	csrw	mstatus,t0
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/Startup/startup_CH572.S:171
+	la t0, _vector_base
+ 822:	1ffff297          	auipc	t0,0x1ffff
+ 826:	7de28293          	addi	t0,t0,2014 # 20000000 <_highcode_vma_start>
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/Startup/startup_CH572.S:174
+
+	/* 配置向量表模式为绝对地址模式 */
+    ori t0, t0, 3
+ 82a:	0032e293          	ori	t0,t0,3
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/Startup/startup_CH572.S:175
+	csrw mtvec, t0
+ 82e:	30529073          	csrw	mtvec,t0
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/Startup/startup_CH572.S:177
+
+	la t0, main
+ 832:	20000297          	auipc	t0,0x20000
+ 836:	85e28293          	addi	t0,t0,-1954 # 20000090 <main>
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/Startup/startup_CH572.S:178
+	csrw mepc, t0
+ 83a:	34129073          	csrw	mepc,t0
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/Startup/startup_CH572.S:180
+	
+	mret
+ 83e:	30200073          	mret
+
+00000842 <HSECFG_Capacitance>:
+HSECFG_Capacitance():
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_clk.c:81
+ */
+void HSECFG_Capacitance(HSECapTypeDef c)
+{
+    uint8_t x32M_c;
+
+    x32M_c = R8_XT32M_TUNE;
+ 842:	40001737          	lui	a4,0x40001
+ 846:	04e74783          	lbu	a5,78(a4) # 4000104e <_eusrstack+0x1fffe04e>
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_clk.c:82
+    x32M_c = (x32M_c & 0x0f) | (c << 4);
+ 84a:	0512                	slli	a0,a0,0x4
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_clk.c:78
+{
+ 84c:	1141                	addi	sp,sp,-16
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_clk.c:82
+    x32M_c = (x32M_c & 0x0f) | (c << 4);
+ 84e:	8bbd                	andi	a5,a5,15
+ 850:	8fc9                	or	a5,a5,a0
+ 852:	0ff7f793          	zext.b	a5,a5
+__risc_v_disable_irq():
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\SRC\RVMSIS/core_riscv.h:154
+    __asm volatile("csrrc %0, 0x800, %1" : \
+ 856:	08800693          	li	a3,136
+ 85a:	8006b6f3          	csrrc	a3,0x800,a3
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\SRC\RVMSIS/core_riscv.h:156
+    return result & 0x88;
+ 85e:	0886f693          	andi	a3,a3,136
+HSECFG_Capacitance():
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_clk.c:84
+
+    sys_safe_access_enable();
+ 862:	c636                	sw	a3,12(sp)
+ 864:	0000100f          	fence.i
+ 868:	05700693          	li	a3,87
+ 86c:	04d70023          	sb	a3,64(a4)
+ 870:	fa800693          	li	a3,-88
+ 874:	04d70023          	sb	a3,64(a4)
+ 878:	0000100f          	fence.i
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_clk.c:85
+    R8_XT32M_TUNE = x32M_c;
+ 87c:	04f70723          	sb	a5,78(a4)
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_clk.c:86
+    sys_safe_access_disable();
+ 880:	04070023          	sb	zero,64(a4)
+ 884:	47b2                	lw	a5,12(sp)
+__risc_v_enable_irq():
+F:\private\nanoCH57x-private\doc\CH572EVT\EVT\EXAM\SRC\RVMSIS/core_riscv.h:138
+    __asm volatile("csrrs %0, 0x800, %1" : \
+ 886:	8007a7f3          	csrrs	a5,0x800,a5
+HSECFG_Capacitance():
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_clk.c:86
+ 88a:	0000100f          	fence.i
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_clk.c:87
+}
+ 88e:	0141                	addi	sp,sp,16
+ 890:	8082                	ret
+
+00000892 <GPIOA_ModeCfg>:
+GPIOA_ModeCfg():
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_gpio.c:27
+ *
+ * @return  none
+ */
+void GPIOA_ModeCfg(uint32_t pin, GPIOModeTypeDef mode)
+{
+    switch(mode)
+ 892:	4791                	li	a5,4
+ 894:	04b7ec63          	bltu	a5,a1,8ec <GPIOA_ModeCfg+0x5a>
+ 898:	00000797          	auipc	a5,0x0
+ 89c:	2e078793          	addi	a5,a5,736 # b78 <FLASH_EEPROM_CMD+0x138>
+ 8a0:	20f5c5b3          	sh2add	a1,a1,a5
+ 8a4:	4198                	lw	a4,0(a1)
+ 8a6:	973e                	add	a4,a4,a5
+ 8a8:	400017b7          	lui	a5,0x40001
+ 8ac:	0b478793          	addi	a5,a5,180 # 400010b4 <_eusrstack+0x1fffe0b4>
+ 8b0:	8702                	jr	a4
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_gpio.c:30
+    {
+        case GPIO_ModeIN_Floating:
+            R32_PA_PD_DRV &= ~pin;
+ 8b2:	4394                	lw	a3,0(a5)
+ 8b4:	40001737          	lui	a4,0x40001
+ 8b8:	40a6f6b3          	andn	a3,a3,a0
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_gpio.c:42
+            R32_PA_PU |= pin;
+            R32_PA_DIR &= ~pin;
+            break;
+
+        case GPIO_ModeIN_PD:
+            R32_PA_PD_DRV |= pin;
+ 8bc:	c394                	sw	a3,0(a5)
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_gpio.c:43
+            R32_PA_PU &= ~pin;
+ 8be:	0b070693          	addi	a3,a4,176 # 400010b0 <_eusrstack+0x1fffe0b0>
+ 8c2:	429c                	lw	a5,0(a3)
+ 8c4:	40a7f7b3          	andn	a5,a5,a0
+ 8c8:	a819                	j	8de <GPIOA_ModeCfg+0x4c>
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_gpio.c:36
+            R32_PA_PD_DRV &= ~pin;
+ 8ca:	4394                	lw	a3,0(a5)
+ 8cc:	40001737          	lui	a4,0x40001
+ 8d0:	40a6f6b3          	andn	a3,a3,a0
+ 8d4:	c394                	sw	a3,0(a5)
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_gpio.c:37
+            R32_PA_PU |= pin;
+ 8d6:	0b070693          	addi	a3,a4,176 # 400010b0 <_eusrstack+0x1fffe0b0>
+ 8da:	429c                	lw	a5,0(a3)
+ 8dc:	8fc9                	or	a5,a5,a0
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_gpio.c:43
+            R32_PA_PU &= ~pin;
+ 8de:	c29c                	sw	a5,0(a3)
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_gpio.c:44
+            R32_PA_DIR &= ~pin;
+ 8e0:	0a070793          	addi	a5,a4,160
+ 8e4:	4398                	lw	a4,0(a5)
+ 8e6:	40a77733          	andn	a4,a4,a0
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_gpio.c:54
+            R32_PA_DIR |= pin;
+            break;
+
+        case GPIO_ModeOut_PP_20mA:
+            R32_PA_PD_DRV |= pin;
+            R32_PA_DIR |= pin;
+ 8ea:	c398                	sw	a4,0(a5)
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_gpio.c:60
+            break;
+
+        default:
+            break;
+    }
+}
+ 8ec:	8082                	ret
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_gpio.c:42
+            R32_PA_PD_DRV |= pin;
+ 8ee:	4394                	lw	a3,0(a5)
+ 8f0:	40001737          	lui	a4,0x40001
+ 8f4:	8ec9                	or	a3,a3,a0
+ 8f6:	b7d9                	j	8bc <GPIOA_ModeCfg+0x2a>
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_gpio.c:48
+            R32_PA_PD_DRV &= ~pin;
+ 8f8:	4398                	lw	a4,0(a5)
+ 8fa:	40a77733          	andn	a4,a4,a0
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_gpio.c:53
+            R32_PA_PD_DRV |= pin;
+ 8fe:	c398                	sw	a4,0(a5)
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_gpio.c:54
+            R32_PA_DIR |= pin;
+ 900:	400017b7          	lui	a5,0x40001
+ 904:	0a078793          	addi	a5,a5,160 # 400010a0 <_eusrstack+0x1fffe0a0>
+ 908:	4398                	lw	a4,0(a5)
+ 90a:	8f49                	or	a4,a4,a0
+ 90c:	bff9                	j	8ea <GPIOA_ModeCfg+0x58>
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_gpio.c:53
+            R32_PA_PD_DRV |= pin;
+ 90e:	4398                	lw	a4,0(a5)
+ 910:	8f49                	or	a4,a4,a0
+ 912:	b7f5                	j	8fe <GPIOA_ModeCfg+0x6c>
+
+00000914 <GetSysClock>:
+GetSysClock():
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:101
+    if((R8_CLK_SYS_CFG & RB_CLK_SYS_MOD) == RB_CLK_SYS_MOD)
+ 914:	400017b7          	lui	a5,0x40001
+ 918:	2798                	lbu	a4,8(a5)
+ 91a:	0c000693          	li	a3,192
+ 91e:	0c077713          	andi	a4,a4,192
+ 922:	00d71763          	bne	a4,a3,930 <GetSysClock+0x1c>
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:103
+        return (Freq_LSI);
+ 926:	20000517          	auipc	a0,0x20000
+ 92a:	e7652503          	lw	a0,-394(a0) # 2000079c <Freq_LSI>
+ 92e:	8082                	ret
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:105
+    else if((R8_CLK_SYS_CFG & RB_CLK_SYS_MOD) == 0x40)
+ 930:	2798                	lbu	a4,8(a5)
+ 932:	04000693          	li	a3,64
+ 936:	0c077713          	andi	a4,a4,192
+ 93a:	02d71063          	bne	a4,a3,95a <GetSysClock+0x46>
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:107
+        return (600000000 / ((R8_CLK_SYS_CFG & 0x1f)?(R8_CLK_SYS_CFG & 0x1f):32));
+ 93e:	2794                	lbu	a3,8(a5)
+ 940:	02000713          	li	a4,32
+ 944:	8afd                	andi	a3,a3,31
+ 946:	c299                	beqz	a3,94c <GetSysClock+0x38>
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:107 (discriminator 1)
+ 948:	2798                	lbu	a4,8(a5)
+ 94a:	8b7d                	andi	a4,a4,31
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:107 (discriminator 4)
+ 94c:	23c34537          	lui	a0,0x23c34
+ 950:	60050513          	addi	a0,a0,1536 # 23c34600 <_eusrstack+0x3c31600>
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:111 (discriminator 4)
+        return (32000000 / ((R8_CLK_SYS_CFG & 0x1f)?(R8_CLK_SYS_CFG & 0x1f):32));
+ 954:	02e54533          	div	a0,a0,a4
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:113 (discriminator 4)
+}
+ 958:	8082                	ret
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:111
+        return (32000000 / ((R8_CLK_SYS_CFG & 0x1f)?(R8_CLK_SYS_CFG & 0x1f):32));
+ 95a:	2794                	lbu	a3,8(a5)
+ 95c:	02000713          	li	a4,32
+ 960:	8afd                	andi	a3,a3,31
+ 962:	c299                	beqz	a3,968 <GetSysClock+0x54>
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:111 (discriminator 1)
+ 964:	2798                	lbu	a4,8(a5)
+ 966:	8b7d                	andi	a4,a4,31
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_sys.c:111 (discriminator 4)
+ 968:	01e85537          	lui	a0,0x1e85
+ 96c:	80050513          	addi	a0,a0,-2048 # 1e84800 <_data_lma+0x1e83c70>
+ 970:	b7d5                	j	954 <GetSysClock+0x40>
+
+00000972 <UART_BaudRateCfg>:
+UART_BaudRateCfg():
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart.c:43
+ * @param   baudrate    - 波特率
+ *
+ * @return  none
+ */
+void UART_BaudRateCfg(uint32_t baudrate)
+{
+ 972:	1141                	addi	sp,sp,-16
+ 974:	c422                	sw	s0,8(sp)
+ 976:	c606                	sw	ra,12(sp)
+ 978:	842a                	mv	s0,a0
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart.c:46
+    uint32_t x;
+
+    x = 10 * GetSysClock() / 8 / baudrate;
+ 97a:	3f69                	jal	914 <GetSysClock>
+ 97c:	4729                	li	a4,10
+ 97e:	02e507b3          	mul	a5,a0,a4
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart.c:49
+    x = (x + 5) / 10;
+    R16_UART_DL = (uint16_t)x;
+}
+ 982:	40b2                	lw	ra,12(sp)
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart.c:46
+    x = 10 * GetSysClock() / 8 / baudrate;
+ 984:	838d                	srli	a5,a5,0x3
+ 986:	0287d7b3          	divu	a5,a5,s0
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart.c:49
+}
+ 98a:	4422                	lw	s0,8(sp)
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart.c:47
+    x = (x + 5) / 10;
+ 98c:	0795                	addi	a5,a5,5 # 40001005 <_eusrstack+0x1fffe005>
+ 98e:	02e7d7b3          	divu	a5,a5,a4
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart.c:48
+    R16_UART_DL = (uint16_t)x;
+ 992:	40003737          	lui	a4,0x40003
+ 996:	0807c7b3          	zext.h	a5,a5
+ 99a:	40f71623          	sh	a5,1036(a4) # 4000340c <_eusrstack+0x2000040c>
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart.c:49
+}
+ 99e:	0141                	addi	sp,sp,16
+ 9a0:	8082                	ret
+
+000009a2 <UART_DefInit>:
+UART_DefInit():
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart.c:26
+    UART_BaudRateCfg(115200);
+ 9a2:	6571                	lui	a0,0x1c
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart.c:25
+{
+ 9a4:	1141                	addi	sp,sp,-16
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart.c:26
+    UART_BaudRateCfg(115200);
+ 9a6:	20050513          	addi	a0,a0,512 # 1c200 <_data_lma+0x1b670>
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart.c:25
+{
+ 9aa:	c606                	sw	ra,12(sp)
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart.c:26
+    UART_BaudRateCfg(115200);
+ 9ac:	37d9                	jal	972 <UART_BaudRateCfg>
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart.c:27
+    R8_UART_FCR = (2 << 6) | RB_FCR_FIFO_EN; // FIFO打开，触发点4字节
+ 9ae:	400037b7          	lui	a5,0x40003
+ 9b2:	f8100713          	li	a4,-127
+ 9b6:	40e78123          	sb	a4,1026(a5) # 40003402 <_eusrstack+0x20000402>
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart.c:28
+    R8_UART_LCR = RB_LCR_WORD_SZ;
+ 9ba:	470d                	li	a4,3
+ 9bc:	40e781a3          	sb	a4,1027(a5)
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart.c:29
+    R8_UART_IER = RB_IER_TXD_EN;
+ 9c0:	04000713          	li	a4,64
+ 9c4:	40e780a3          	sb	a4,1025(a5)
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart.c:30
+    R8_UART_DIV = 1;
+ 9c8:	4705                	li	a4,1
+ 9ca:	40e78723          	sb	a4,1038(a5)
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart.c:31
+}
+ 9ce:	40b2                	lw	ra,12(sp)
+ 9d0:	0141                	addi	sp,sp,16
+ 9d2:	8082                	ret
+
+000009d4 <UART_SendString>:
+UART_SendString():
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart.c:106
+ */
+void UART_SendString(uint8_t *buf, uint16_t l)
+{
+    uint16_t len = l;
+
+    while(len)
+ 9d4:	95aa                	add	a1,a1,a0
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart.c:108
+    {
+        if(R8_UART_TFC != UART_FIFO_SIZE)
+ 9d6:	400037b7          	lui	a5,0x40003
+ 9da:	4721                	li	a4,8
+ 9dc:	400036b7          	lui	a3,0x40003
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart.c:106
+    while(len)
+ 9e0:	00b51363          	bne	a0,a1,9e6 <UART_SendString+0x12>
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart.c:114
+        {
+            R8_UART_THR = *buf++;
+            len--;
+        }
+    }
+}
+ 9e4:	8082                	ret
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart.c:108
+        if(R8_UART_TFC != UART_FIFO_SIZE)
+ 9e6:	40b7c603          	lbu	a2,1035(a5) # 4000340b <_eusrstack+0x2000040b>
+ 9ea:	fee60be3          	beq	a2,a4,9e0 <UART_SendString+0xc>
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart.c:110
+            R8_UART_THR = *buf++;
+ 9ee:	2110                	lbu	a2,0(a0)
+ 9f0:	0505                	addi	a0,a0,1
+ 9f2:	40c68423          	sb	a2,1032(a3) # 40003408 <_eusrstack+0x20000408>
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart.c:111
+            len--;
+ 9f6:	b7ed                	j	9e0 <UART_SendString+0xc>
+
+000009f8 <UART_RecvString>:
+UART_RecvString():
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart.c:129
+ */
+uint16_t UART_RecvString(uint8_t *buf)
+{
+    uint16_t len = 0;
+
+    while(R8_UART_RFC)
+ 9f8:	4781                	li	a5,0
+ 9fa:	40003737          	lui	a4,0x40003
+ 9fe:	40a74683          	lbu	a3,1034(a4) # 4000340a <_eusrstack+0x2000040a>
+ a02:	e681                	bnez	a3,a0a <UART_RecvString+0x12>
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart.c:136
+        *buf++ = R8_UART_RBR;
+        len++;
+    }
+
+    return (len);
+}
+ a04:	0807c533          	zext.h	a0,a5
+ a08:	8082                	ret
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart.c:131
+        *buf++ = R8_UART_RBR;
+ a0a:	40874603          	lbu	a2,1032(a4)
+ a0e:	00f506b3          	add	a3,a0,a5
+ a12:	0785                	addi	a5,a5,1
+ a14:	a290                	sb	a2,0(a3)
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart.c:132
+        len++;
+ a16:	b7e5                	j	9fe <UART_RecvString+0x6>
+
+00000a18 <UART_Remap>:
+UART_Remap():
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart.c:153
+ */
+void UART_Remap(FunctionalState s, UARTTxPinRemapDef u_tx, UARTRxPinRemapDef u_rx)
+{
+    if(s)
+    {
+        R16_PIN_ALTERNATE_H &= ~(RB_UART_TXD | RB_UART_RXD); // 该寄存器仅在上电复位和ShutDown睡眠时清0
+ a18:	40001737          	lui	a4,0x40001
+ a1c:	2f3e                	lhu	a5,26(a4)
+ a1e:	0807c7b3          	zext.h	a5,a5
+ a22:	fc07f793          	andi	a5,a5,-64
+ a26:	0807c7b3          	zext.h	a5,a5
+ a2a:	af3e                	sh	a5,26(a4)
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart.c:151
+    if(s)
+ a2c:	c909                	beqz	a0,a3e <UART_Remap+0x26>
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart.c:154
+        R16_PIN_ALTERNATE_H |= (u_tx << 3) | u_rx;
+ a2e:	2f3e                	lhu	a5,26(a4)
+ a30:	058e                	slli	a1,a1,0x3
+ a32:	8e5d                	or	a2,a2,a5
+ a34:	8dd1                	or	a1,a1,a2
+ a36:	0805c5b3          	zext.h	a1,a1
+ a3a:	af2e                	sh	a1,26(a4)
+ a3c:	8082                	ret
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/StdPeriphDriver/CH57x_uart.c:160
+    }
+    else
+    {
+        R16_PIN_ALTERNATE_H &= ~(RB_UART_TXD | RB_UART_RXD);
+    }
+}
+ a3e:	8082                	ret
+
+00000a40 <FLASH_EEPROM_CMD>:
+FLASH_EEPROM_CMD():
+ a40:	1101                	addi	sp,sp,-32
+ a42:	872a                	mv	a4,a0
+ a44:	ce06                	sw	ra,28(sp)
+ a46:	852e                	mv	a0,a1
+ a48:	cc26                	sw	s1,24(sp)
+ a4a:	85b2                	mv	a1,a2
+ a4c:	ca4a                	sw	s2,20(sp)
+ a4e:	8636                	mv	a2,a3
+ a50:	c622                	sw	s0,12(sp)
+ a52:	40002437          	lui	s0,0x40002
+ a56:	e000e7b7          	lui	a5,0xe000e
+ a5a:	56fd                	li	a3,-1
+ a5c:	0007a903          	lw	s2,0(a5) # e000e000 <_eusrstack+0xc000b000>
+ a60:	43c4                	lw	s1,4(a5)
+ a62:	18d7a023          	sw	a3,384(a5)
+ a66:	18d7a223          	sw	a3,388(a5)
+ a6a:	fff70793          	addi	a5,a4,-1 # 40000fff <_eusrstack+0x1fffdfff>
+ a6e:	0ff7f793          	zext.b	a5,a5
+ a72:	4689                	li	a3,2
+ a74:	0af6e063          	bltu	a3,a5,b14 <FLASH_EEPROM_CMD+0xd4>
+ a78:	400017b7          	lui	a5,0x40001
+ a7c:	0457c783          	lbu	a5,69(a5) # 40001045 <_eusrstack+0x1fffe045>
+ a80:	000406b7          	lui	a3,0x40
+ a84:	0207f793          	andi	a5,a5,32
+ a88:	e399                	bnez	a5,a8e <FLASH_EEPROM_CMD+0x4e>
+ a8a:	0003c6b7          	lui	a3,0x3c
+ a8e:	57f9                	li	a5,-2
+ a90:	04d57563          	bgeu	a0,a3,ada <FLASH_EEPROM_CMD+0x9a>
+ a94:	00c50833          	add	a6,a0,a2
+ a98:	0506e163          	bltu	a3,a6,ada <FLASH_EEPROM_CMD+0x9a>
+ a9c:	4789                	li	a5,2
+ a9e:	04f71463          	bne	a4,a5,ae6 <FLASH_EEPROM_CMD+0xa6>
+ aa2:	8209                	srli	a2,a2,0x2
+ aa4:	20000097          	auipc	ra,0x20000
+ aa8:	af4080e7          	jalr	-1292(ra) # 20000598 <FLASH_CMD_ROM_WRITE>
+ aac:	87aa                	mv	a5,a0
+ aae:	40001737          	lui	a4,0x40001
+ ab2:	05700693          	li	a3,87
+ ab6:	04d70023          	sb	a3,64(a4) # 40001040 <_eusrstack+0x1fffe040>
+ aba:	fa800693          	li	a3,-88
+ abe:	04d70023          	sb	a3,64(a4)
+ ac2:	04474683          	lbu	a3,68(a4)
+ ac6:	8ac1                	andi	a3,a3,16
+ ac8:	04d70223          	sb	a3,68(a4)
+ acc:	e000e737          	lui	a4,0xe000e
+ ad0:	11272023          	sw	s2,256(a4) # e000e100 <_eusrstack+0xc000b100>
+ ad4:	10972223          	sw	s1,260(a4)
+ ad8:	4432                	lw	s0,12(sp)
+ ada:	40f2                	lw	ra,28(sp)
+ adc:	44e2                	lw	s1,24(sp)
+ ade:	4952                	lw	s2,20(sp)
+ ae0:	853e                	mv	a0,a5
+ ae2:	6105                	addi	sp,sp,32
+ ae4:	8082                	ret
+ ae6:	4785                	li	a5,1
+ ae8:	00f71f63          	bne	a4,a5,b06 <FLASH_EEPROM_CMD+0xc6>
+ aec:	6785                	lui	a5,0x1
+ aee:	17fd                	addi	a5,a5,-1 # fff <_data_lma+0x46f>
+ af0:	963e                	add	a2,a2,a5
+ af2:	8fe9                	and	a5,a5,a0
+ af4:	963e                	add	a2,a2,a5
+ af6:	77fd                	lui	a5,0xfffff
+ af8:	8e7d                	and	a2,a2,a5
+ afa:	8d7d                	and	a0,a0,a5
+ afc:	20000097          	auipc	ra,0x20000
+ b00:	afc080e7          	jalr	-1284(ra) # 200005f8 <FLASH_CMD_ROM_ERASE>
+ b04:	b765                	j	aac <FLASH_EEPROM_CMD+0x6c>
+ b06:	20000097          	auipc	ra,0x20000
+ b0a:	b64080e7          	jalr	-1180(ra) # 2000066a <FLASH_CMD_ROM_VERIFY>
+ b0e:	00150793          	addi	a5,a0,1
+ b12:	bf71                	j	aae <FLASH_EEPROM_CMD+0x6e>
+ b14:	47b5                	li	a5,13
+ b16:	00f71a63          	bne	a4,a5,b2a <FLASH_EEPROM_CMD+0xea>
+ b1a:	0b900513          	li	a0,185
+ b1e:	20000097          	auipc	ra,0x20000
+ b22:	b9c080e7          	jalr	-1124(ra) # 200006ba <FLASH_CMD_ROM_PWR>
+ b26:	4781                	li	a5,0
+ b28:	b759                	j	aae <FLASH_EEPROM_CMD+0x6e>
+ b2a:	47b1                	li	a5,12
+ b2c:	00f71563          	bne	a4,a5,b36 <FLASH_EEPROM_CMD+0xf6>
+ b30:	0ab00513          	li	a0,171
+ b34:	b7ed                	j	b1e <FLASH_EEPROM_CMD+0xde>
+ b36:	4799                	li	a5,6
+ b38:	00f71763          	bne	a4,a5,b46 <FLASH_EEPROM_CMD+0x106>
+ b3c:	20000097          	auipc	ra,0x20000
+ b40:	b90080e7          	jalr	-1136(ra) # 200006cc <FLASH_CMD_GET_ROM_INFO>
+ b44:	b7cd                	j	b26 <FLASH_EEPROM_CMD+0xe6>
+ b46:	479d                	li	a5,7
+ b48:	00f71b63          	bne	a4,a5,b5e <FLASH_EEPROM_CMD+0x11e>
+ b4c:	0005a023          	sw	zero,0(a1)
+ b50:	0005a223          	sw	zero,4(a1)
+ b54:	20000097          	auipc	ra,0x20000
+ b58:	bd8080e7          	jalr	-1064(ra) # 2000072c <FLASH_CMD_GET_UNIQUE_ID>
+ b5c:	b7e9                	j	b26 <FLASH_EEPROM_CMD+0xe6>
+ b5e:	4791                	li	a5,4
+ b60:	00f71763          	bne	a4,a5,b6e <FLASH_EEPROM_CMD+0x12e>
+ b64:	20000097          	auipc	ra,0x20000
+ b68:	c06080e7          	jalr	-1018(ra) # 2000076a <FLASH_CMD_ROM_SW_RESET>
+ b6c:	bf6d                	j	b26 <FLASH_EEPROM_CMD+0xe6>
+ b6e:	4781                	li	a5,0
+ b70:	df1d                	beqz	a4,aae <FLASH_EEPROM_CMD+0x6e>
+ b72:	57f1                	li	a5,-4
+ b74:	bf2d                	j	aae <FLASH_EEPROM_CMD+0x6e>
+ b76:	0000                	unimp
+ b78:	fd3a                	.2byte	0xfd3a
+ b7a:	ffff                	.2byte	0xffff
+ b7c:	fd52                	.2byte	0xfd52
+ b7e:	ffff                	.2byte	0xffff
+ b80:	fd76                	.2byte	0xfd76
+ b82:	ffff                	.2byte	0xffff
+ b84:	fd80                	.2byte	0xfd80
+ b86:	ffff                	.2byte	0xffff
+ b88:	fd96                	.2byte	0xfd96
+ b8a:	ffff                	.2byte	0xffff
+
+Disassembly of section .vector_handler:
+
+00000b8c <BB_IRQHandler>:
+ENDOCE_IRQHandler():
+F:/private/nanoCH57x-private/doc/CH572EVT/EVT/EXAM/SRC/Startup/startup_CH572.S:111
+	j 1b
+ b8c:	a001                	j	b8c <BB_IRQHandler>
