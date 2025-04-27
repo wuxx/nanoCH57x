@@ -13,9 +13,9 @@ nanoCH57x
 # nanoCH57x介绍
 nanoCH57x是MuseLab推出的基于WCH CH572/CH570的开发板，芯片最高主频100MHz，支持蓝牙BLE和2.4GHz通信，可通过USB口下载烧录，方便客户进行快速的原型验证及开发
 
-![3](https://github.com/wuxx/nanoCH57x/blob/master/doc/3.jpg)
-![4](https://github.com/wuxx/nanoCH57x/blob/master/doc/4.jpg)
-![5](https://github.com/wuxx/nanoCH57x/blob/master/doc/5.jpg)
+![3](https://github.com/wuxx/nanoCH57x/blob/main/doc/3.jpg)
+![4](https://github.com/wuxx/nanoCH57x/blob/main/doc/4.jpg)
+![5](https://github.com/wuxx/nanoCH57x/blob/main/doc/5.jpg)
 
 
 # 特性
@@ -26,7 +26,7 @@ nanoCH57x是MuseLab推出的基于WCH CH572/CH570的开发板，芯片最高主�
 - 板载2.4G PCB天线，支持BLE/2.4GHz RF收发
 
 # 芯片资源
-![CH572](https://github.com/wuxx/nanoCH57x/blob/master/doc/CH572.jpg)
+![CH572](https://github.com/wuxx/nanoCH57x/blob/main/doc/CH572.jpg)
 (CH570除不支持BLE外，其他特性与CH572完全相同)
 
 # 使用教程
@@ -38,10 +38,10 @@ nanoCH57x是MuseLab推出的基于WCH CH572/CH570的开发板，芯片最高主�
 
 ### 编译
 以GPIO工程为例，双击GPIO_Toggle.wvproj打开工程  
-![MRS-1](https://github.com/wuxx/nanoCH57x/blob/master/doc/MRS-1.png)
-![MRS-2](https://github.com/wuxx/nanoCH57x/blob/master/doc/MRS-2.png)  
+![MRS-1](https://github.com/wuxx/nanoCH57x/blob/main/doc/MRS-1.png)
+![MRS-2](https://github.com/wuxx/nanoCH57x/blob/main/doc/MRS-2.png)  
 点击 Project -> Build Project 对工程进行编译  
-![MRS-3](https://github.com/wuxx/nanoCH57x/blob/master/doc/MRS-3.png)
+![MRS-3](https://github.com/wuxx/nanoCH57x/blob/main/doc/MRS-3.png)
 
 
 ## WCHLink烧录
@@ -61,11 +61,12 @@ SWDIO | PA0 |
 可在[沁恒官网](https://www.wch.cn/downloads/WCHISPTool_Setup_exe.html)下载WCHISPTool工具
 
 ### WCHISPTool 配置
-![ISP-1](https://github.com/wuxx/nanoCH57x/blob/master/doc/ISP-1.png)
+![ISP-1](https://github.com/wuxx/nanoCH57x/blob/main/doc/ISP-1.png)
 
 芯片系列选择CH57x系列，芯片型号选择CH572，下载方式选择USB。
 按住开发板上的BOOT按键，保持按住的状态上电，上电后再松开BOOT按键，令芯片进入bootloader，若成功进入bootloader，则在ISP工具中的USB设备列表中可检测到目标芯片。
 然后在下方选择需要烧录的bin或者hex文件，点击下载即可烧录固件。
+![ISP-2](https://github.com/wuxx/nanoCH57x/blob/main/doc/ISP-2.png)
 
 
 # 产品链接
