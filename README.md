@@ -12,9 +12,8 @@ nanoCH57x
 
 # Introduce
 nanoCH57x is a development board based on WCH CH572/CH570 launched by MuseLab. The chip has a maximum main frequency of 100MHz, supports Bluetooth BLE and 2.4GHz communication, and can be downloaded and burned through the USB port, which is convenient for customers to conduct rapid prototype verification and development
-![3](https://github.com/wuxx/nanoCH57x/blob/main/doc/3.jpg)
-![4](https://github.com/wuxx/nanoCH57x/blob/main/doc/4.jpg)
-![5](https://github.com/wuxx/nanoCH57x/blob/main/doc/5.jpg)
+![Top](https://github.com/wuxx/nanoCH57x/blob/main/doc/nanoCH57x-Top.jpg)
+![Bottom](https://github.com/wuxx/nanoCH57x/blob/main/doc/nanoCH57x-Top.jpg)
 
 
 # Feature

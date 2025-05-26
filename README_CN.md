@@ -13,9 +13,8 @@ nanoCH57x
 # nanoCH57x介绍
 nanoCH57x是MuseLab推出的基于WCH CH572/CH570的开发板，芯片最高主频100MHz，支持蓝牙BLE和2.4GHz通信，可通过USB口下载烧录，方便客户进行快速的原型验证及开发
 
-![3](https://github.com/wuxx/nanoCH57x/blob/main/doc/3.jpg)
-![4](https://github.com/wuxx/nanoCH57x/blob/main/doc/4.jpg)
-![5](https://github.com/wuxx/nanoCH57x/blob/main/doc/5.jpg)
+![Top](https://github.com/wuxx/nanoCH57x/blob/main/doc/nanoCH57x-Top.jpg)
+![Bottom](https://github.com/wuxx/nanoCH57x/blob/main/doc/nanoCH57x-Top.jpg)
 
 
 # 特性
