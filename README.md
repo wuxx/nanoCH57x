@@ -2,50 +2,50 @@ nanoCH57x
 -----------
 [English](./README.md)
 
-* [nanoCH57x介绍](#nanoCH57x介绍) 
-* [特性](#特性)
-* [芯片资源](#芯片资源)
-* [使用教程](#使用教程)
-* [产品链接](#产品链接)
-* [参考](#参考)
+* [Introduce](#Introduce) 
+* [Feature](#Feature)
+* [Chip Resources](#chip-resources)
+* [How To Use](#how-to-use)
+* [Product Link](#product-link)
+* [Reference](#reference)
 
 
-# nanoCH57x介绍
-nanoCH57x是MuseLab推出的基于WCH CH572/CH570的开发板，芯片最高主频100MHz，支持蓝牙BLE和2.4GHz通信，可通过USB口下载烧录，方便客户进行快速的原型验证及开发
-
+# Introduce
+nanoCH57x is a development board based on WCH CH572/CH570 launched by MuseLab. The chip has a maximum main frequency of 100MHz, supports Bluetooth BLE and 2.4GHz communication, and can be downloaded and burned through the USB port, which is convenient for customers to conduct rapid prototype verification and development
 ![3](https://github.com/wuxx/nanoCH57x/blob/main/doc/3.jpg)
 ![4](https://github.com/wuxx/nanoCH57x/blob/main/doc/4.jpg)
 ![5](https://github.com/wuxx/nanoCH57x/blob/main/doc/5.jpg)
 
 
-# 特性
-- 板载32MHz晶振，芯片最高主频100MHz
-- 支持USB 2.0全速 HOST/Device
-- 板载复位RST按键与BOOT按键，可通过BOOT按键进入下载模式
-- 板载电源指示灯（红色LED）与IO控制指示灯（蓝色LED，由PA11控制）
-- 板载2.4G PCB天线，支持BLE/2.4GHz RF收发
+# Feature
+- Onboard 32MHz crystal oscillator, chip maximum frequency 100MHz
+- Support USB 2.0 full-speed HOST/Device
+- Onboard reset RST button and BOOT button, you can enter the download mode through the BOOT button
+- Onboard power indicator (red LED) and IO control indicator (blue LED, controlled by PA11)
+- Onboard 2.4G PCB antenna, support BLE/2.4GHz RF transceiver
 
-# 芯片资源
+# Chip Resources
 ![CH572](https://github.com/wuxx/nanoCH57x/blob/main/doc/CH572.jpg)
-(CH570除不支持BLE外，其他特性与CH572完全相同)
+        (Note: CH570 has the same features as CH572 except that it does not support BLE.)
 
-# 使用教程
+# How To Use
 ## MounRiver Studio IDE
-沁恒官方提供MounRiver Studio IDE开发环境，支持Windows/Linux/Mac，具体使用说明如下
+WCH officially provides MounRiver Studio IDE development environment, which supports Windows/Linux/Mac. The instructions are as follows
  
-### MounRiver Studio 下载
-可在官网[MounRiver Studio](http://www.mounriver.com)下载IDE，选择最新版本下载即可。
+### MounRiver Studio Download
+download the MounRiver Studio IDE from the official website [MounRiver Studio](http://www.mounriver.com), and just select the latest version to download.
 
-### 编译
-以GPIO工程为例，双击GPIO_Toggle.wvproj打开工程  
+### Compile
+Take the GPIO project as an example, double-click GPIO_Toggle.wvproj to open the project  
 ![MRS-1](https://github.com/wuxx/nanoCH57x/blob/main/doc/MRS-1.png)
 ![MRS-2](https://github.com/wuxx/nanoCH57x/blob/main/doc/MRS-2.png)  
-点击 Project -> Build Project 对工程进行编译  
+Click Project -> Build Project to compile the project  
+Note: The compiled binary file is located in the obj directory of the project, such as EVT\EXAM\GPIO\GPIO\obj\GPIO.hex
 ![MRS-3](https://github.com/wuxx/nanoCH57x/blob/main/doc/MRS-3.png)
 
 
-## WCHLink烧录
-若使用沁恒官方的下载器WCHLink进行下载，则按照如下方式接线  
+## Program with WCHLink
+If you use the official downloader WCHLink to download, please connect as follows
 WCHLink|nanoCH57x |
 ----|----|
 GND |  GND |
@@ -53,25 +53,24 @@ SWCLK | PA1 |
 SWDIO | PA0 | 
 3V3 | 3V3|
 
-然后则点击MounRiver界面上的菜单 Flash -> Download 即可完成烧录，若使用自带的USB口进行烧录，则操作说明如下
+Then click the menu Flash -> Download on the MounRiver interface to complete the burning. If you use the built-in USB port for burning, the operation instructions are as follows:  
 
-注：编译生成的二进制文件位于工程的obj目录下，如EVT\EXAM\GPIO\GPIO\obj\GPIO.hex
 
-### WCHISPTool 下载
-可在[沁恒官网](https://www.wch.cn/downloads/WCHISPTool_Setup_exe.html)下载WCHISPTool工具
+### Program with WCHISPTool
+download WCHISPTool at [WCH Official Website](https://www.wch.cn/downloads/WCHISPTool_Setup_exe.html)
 
-### WCHISPTool 配置
+### WCHISPTool Configure
 ![ISP-1](https://github.com/wuxx/nanoCH57x/blob/main/doc/ISP-1.png)
 
-芯片系列选择CH57x系列，芯片型号选择CH572，下载方式选择USB。
-按住开发板上的BOOT按键，保持按住的状态上电，上电后再松开BOOT按键，令芯片进入bootloader，若成功进入bootloader，则在ISP工具中的USB设备列表中可检测到目标芯片。
-然后在下方选择需要烧录的bin或者hex文件，点击下载即可烧录固件。
+Select CH57x series for chip series, CH572 for chip model, and USB for download method.
+Press and hold the BOOT button on the development board, keep it pressed to power on, and then release the BOOT button to allow the chip to enter the bootloader. If it successfully enters the bootloader, the target chip can be detected in the USB device list in the ISP tool.
+Then select the bin or hex file to be burned below, and click Download to program the firmware.  
 ![ISP-2](https://github.com/wuxx/nanoCH57x/blob/main/doc/ISP-2.png)
 
 
-# 产品链接
+# Product Link
 [nanoCH57x Board](https://item.taobao.com/item.htm?spm=a1z10.3-c.w4002-21349689064.10.6f55773dXd3CDz&id=689934001629)
 
-# 参考
+# Reference
 ### WCH
 https://www.wch.cn/
