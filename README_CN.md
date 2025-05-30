@@ -67,7 +67,7 @@ SWDIO | PA0 |
 
 
 # 产品链接
-[nanoCH57x Board](https://item.taobao.com/item.htm?spm=a1z10.3-c.w4002-21349689064.10.6f55773dXd3CDz&id=689934001629)
+[nanoCH57x Board](https://item.taobao.com/item.htm?id=928920645660)
 
 # 参考
 ### WCH

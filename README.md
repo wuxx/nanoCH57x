@@ -1,6 +1,6 @@
 nanoCH57x
 -----------
-[English](./README.md)
+[中文](./README_CN.md)
 
 * [Introduce](#Introduce) 
 * [Feature](#Feature)
@@ -67,7 +67,7 @@ Then select the bin or hex file to be burned below, and click Download to progra
 
 
 # Product Link
-[nanoCH57x Board](https://item.taobao.com/item.htm?spm=a1z10.3-c.w4002-21349689064.10.6f55773dXd3CDz&id=689934001629)
+[nanoCH57x Board](https://www.aliexpress.com/item/3256808936900983.html)
 
 # Reference
 ### WCH
