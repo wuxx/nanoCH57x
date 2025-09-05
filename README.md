@@ -67,7 +67,8 @@ Then select the bin or hex file to be burned below, and click Download to progra
 
 
 # Product Link
-[nanoCH57x Board](https://www.aliexpress.com/item/3256808936900983.html)
+[Aliexpress](https://www.aliexpress.com/item/3256808936900983.html)  
+[Tindie](https://www.tindie.com/products/johnnywu/nanoch57x-development-board)
 
 # Reference
 ### WCH
